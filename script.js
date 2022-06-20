@@ -1,4 +1,4 @@
-const textNodes = [
+const textNode = [
   {
     id: 1,
     text: 'firstText',
@@ -25,17 +25,26 @@ const textNodes = [
   }
 ];
 
-let textElement = document.querySelector('.text');
-let btns = document.querySelector('.buttons');
+let text = document.querySelector('.text');
+let btns = document.querySelector('.buttons button:first-child');
+let btn = document.querySelectorAll('button');
+
+btn.forEach(i => {
+  i.addEventListener('click', elem => {
+    if (elem.target.classList.contains('1')) {
+      text.textContent = textNode[0].text;
+    }
+  })
+})
 
 function showText(text) {
-  for (let i = 0; i < text.length; i++) {
-    console.log(text[i]);
-    for (let k = 0; k < text[i].option.length; k++) {
-      console.log(text[i].option)
-    }
-  }
 
-};
+}
 
-showText(textNodes);
+function showChoise(choise) {
+
+}
+
+
+
+showText(text);
