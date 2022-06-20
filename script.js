@@ -29,10 +29,10 @@ let textElement = document.querySelector('.text');
 let btns = document.querySelector('.buttons');
 
 function showText(text) {
-  for (let i = 0; i < textNodes.length; i++) {
-    console.log(textNodes[i]);
-    for (let k = 0; k < textNodes[i].option.length; k++) {
-      console.log(textNodes[i].option)
+  for (let i = 0; i < text.length; i++) {
+    console.log(text[i]);
+    for (let k = 0; k < text[i].option.length; k++) {
+      console.log(text[i].option)
     }
   }
 
