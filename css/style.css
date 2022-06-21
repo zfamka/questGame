@@ -28,7 +28,8 @@ img {
 }
 
 button {
-  width: 100%;
+  display: block;
+  margin: 0 auto;
   background-color: rgb(23, 21, 21);
   border: 0;
   font-size: 16px;

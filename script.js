@@ -1,50 +1,73 @@
-const textNode = [
+const textElement = document.querySelector('.text');
+const optionButtonsElement = document.querySelector('.buttons');
+
+function startGame() {
+  showTextNode(1)
+};
+
+function showTextNode(textNodeIndex) {
+  const textNode = textNodes.find(textNode => textNode.id === textNodeIndex);
+  textElement.textContent = textNode.text;
+  while (optionButtonsElement.firstChild) {
+    optionButtonsElement.removeChild(optionButtonsElement.firstChild);
+  };
+
+  textNode.options.forEach(option => {
+    if (showOption(option)) {
+      const button = document.createElement('button');
+      button.textContent = option.text;
+      button.addEventListener('click', () => selectOption(option));
+      optionButtonsElement.appendChild(button);
+    }
+  })
+};
+
+function showOption(option) {
+  return true
+}
+
+function selectOption(option) {
+  const nextTextNodeId = option.nextText;
+  showTextNode(nextTextNodeId);
+};
+
+const textNodes = [
   {
     id: 1,
-    text: 'firstText',
-    option: [
+    text: 'first page hehe',
+    options: [
       {
-        textBtn: 'choise one',
+        text: 'fisrt choise',
         nextText: 2,
       },
       {
-        textBtn: 'choise two',
+        text: 'second choise',
         nextText: 2,
-      }
+      },
+      {
+        text: 'last choise',
+        nextText: 3,
+      },
     ]
   },
   {
     id: 2,
-    text: 'secondText',
-    option: [
+    text: 'second page hehe',
+    options: [
       {
-        textBtn: 'choise two',
-        nextText: 3,
+        text: '2first choise',
+        nextState: 3,
+      },
+      {
+        text: '2second choise',
+        nextState: 3
       }
     ]
+  },
+  {
+    id: 3,
+    text: 'YOOU DIIIIEEEE hehe',
   }
-];
+]
 
-let text = document.querySelector('.text');
-let btns = document.querySelector('.buttons button:first-child');
-let btn = document.querySelectorAll('button');
-
-btn.forEach(i => {
-  i.addEventListener('click', elem => {
-    if (elem.target.classList.contains('1')) {
-      text.textContent = textNode[0].text;
-    }
-  })
-})
-
-function showText(text) {
-
-}
-
-function showChoise(choise) {
-
-}
-
-
-
-showText(text);
+startGame();
