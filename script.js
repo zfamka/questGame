@@ -1,73 +1,404 @@
-const textElement = document.querySelector('.text');
-const optionButtonsElement = document.querySelector('.buttons');
+const textElement = document.querySelector('.text')
+const optionButtonsElement = document.querySelector('.buttons')
+
 
 function startGame() {
   showTextNode(1)
-};
+}
 
 function showTextNode(textNodeIndex) {
-  const textNode = textNodes.find(textNode => textNode.id === textNodeIndex);
-  textElement.textContent = textNode.text;
+  const textNode = textNodes.find(textNode => textNode.id === textNodeIndex)
+  textElement.textContent = textNode.text
   while (optionButtonsElement.firstChild) {
-    optionButtonsElement.removeChild(optionButtonsElement.firstChild);
-  };
+    optionButtonsElement.removeChild(optionButtonsElement.firstChild)
+  }
 
   textNode.options.forEach(option => {
     if (showOption(option)) {
-      const button = document.createElement('button');
-      button.textContent = option.text;
-      button.addEventListener('click', () => selectOption(option));
-      optionButtonsElement.appendChild(button);
+      const button = document.createElement('button')
+      button.textContent = option.text
+      button.addEventListener('click', () => selectOption(option))
+      optionButtonsElement.appendChild(button)
     }
   })
-};
+}
 
 function showOption(option) {
   return true
 }
 
 function selectOption(option) {
-  const nextTextNodeId = option.nextText;
-  showTextNode(nextTextNodeId);
-};
+  const nextTextNodeId = option.nextText
+  if (nextTextNodeId <= 0) {
+    return startGame()
+  }
+  showTextNode(nextTextNodeId)
+}
 
 const textNodes = [
   {
     id: 1,
-    text: 'first page hehe',
+    text: 'Ти прокидаєшься',
     options: [
       {
-        text: 'fisrt choise',
+        text: 'Відкрити очі',
         nextText: 2,
-      },
-      {
-        text: 'second choise',
-        nextText: 2,
-      },
-      {
-        text: 'last choise',
-        nextText: 3,
       },
     ]
   },
   {
     id: 2,
-    text: 'second page hehe',
+    text: 'Ні, ти не прокинувся',
     options: [
       {
-        text: '2first choise',
-        nextState: 3,
+        text: 'Відкрити очі',
+        nextText: 3,
       },
-      {
-        text: '2second choise',
-        nextState: 3
-      }
     ]
   },
   {
     id: 3,
-    text: 'YOOU DIIIIEEEE hehe',
-  }
+    text: 'Бо ти не спав',
+    options: [
+      {
+        text: 'Спробувати ще раз',
+        nextText: 4,
+      },
+    ]
+  },
+  {
+    id: 4,
+    text: 'Ти нарешті відкриваєш очі і поступово встаєш на ноги. Тобі не зрозуміло, що коїться та де ти. Ти навіть не впевненний, хто ти сам',
+    options: [
+      {
+        text: 'Подивитися навколо',
+        nextText: 5,
+      }
+    ]
+  },
+  {
+    id: 5,
+    text: 'Крізь блимаюче світло, ти бачиш, що все догори дригом, Усюди лежать люди в такій самій формі, як у тебе. Ти не розумієш, мертві вони чи тільки непритомні. Раптом ти згадуєшь, що це космічний корабель',
+    options: [
+      {
+        text: 'Треба якось діяти',
+        nextText: 6,
+      }
+    ]
+  },
+  {
+    id: 6,
+    text: 'Ти помічаєш важіль для включення аварійного світла, озираєшься і з іншого боку від тебе бачиш автоматичні двері. Ти чомусь впевненний, що вони ведуть до містка капітана',
+    options: [
+      {
+        text: 'Піти до важеля',
+        nextText: 7,
+      },
+      {
+        text: 'Піти до дверей', // виделка
+        nextText: 35,
+      }
+    ]
+  },
+  {
+    id: 7,
+    text: 'Ти підходиш до важеля',
+    options: [
+      {
+        text: 'Піти до важеля',
+        nextText: 8,
+      },
+    ]
+  },
+  {
+    id: 8,
+    text: 'Так тобі буде краще орієнтуватися',
+    options: [
+      {
+        text: 'Піти до дверей',
+        nextText: 9,
+      },
+    ]
+  },
+  {
+    id: 9,
+    text: 'Коли ти йдешь, помічаєшь тепер багато крові навколо. Не всім пощастило так, як тобі. Тебе починає нудити',
+    options: [
+      {
+        text: 'Йти далі',
+        nextText: 10,
+      },
+    ]
+  },
+  {
+    id: 10,
+    text: 'Коли ти підходиш ближче до дверей, щойно почавши відкриватися, вони зупиняються. Певно, механізм несправний або щось заважає. Отвір меж дверами доволі вузький',
+    options: [
+      {
+        text: 'Протиснутися',
+        nextText: 11,
+      },
+    ]
+  },
+  {
+    id: 11,
+    text: 'Протиснутися через отвір не виходить, треба спробувати роздвинути двері',
+    options: [
+      {
+        text: 'Роздвинути двері руками',
+        nextText: 12,
+      },
+    ]
+  },
+  {
+    id: 12,
+    text: 'Ти хапаєшся за двері та щосили починаєш їх роздвигати',
+    options: [
+      {
+        text: 'Роздвинути', //push more times
+        nextText: 13,
+      },
+    ]
+  },
+  {
+    id: 13,
+    text: 'Тобі вдається відкрити їх достатньо щоб зайти всередину',
+    options: [
+      {
+        text: 'Оглянути місток капітана',
+        nextText: 14,
+      },
+    ]
+  },
+  {
+    id: 14,
+    text: 'Тут все також далеко не радісно. Ти починаєш шкодувати, що включив аварійне світло. Прямо навпроти тебе панель керування кораблем',
+    options: [
+      {
+        text: 'Підійти ближче до неї',
+        nextText: 15,
+      },
+    ]
+  },
+  {
+    id: 15,
+    text: 'Ти бачиш багато різних кнопок, важелів, регуляторів, екранів та іншого. Ти взагалі не розумієш, що робити. Але може десь є інструкція',
+    options: [
+      {
+        text: 'Шукати інструкцію',
+        nextText: 16,
+      },
+    ]
+  },
+  {
+    id: 16,
+    text: 'Пошук по всім можливим місьцям не дає потрібного рузультату. Серед знахідок є тільки блокнот і ручка. Але навіщо вони зараз потрібні',
+    options: [
+      {
+        text: 'Взяти блокнот і ручку',
+        nextText: 17,
+      },
+      {
+        text: 'Не брати',
+        nextText: 27, //виделка
+      },
+    ]
+  },
+  {
+    id: 17,
+    text: `Несподівано ти чуєш чийсь голос "Сюди, скоріше!"`,
+    options: [
+      {
+        text: 'Побігти на голос',
+        nextText: 18,
+      },
+    ]
+  },
+  {
+    id: 18,
+    text: 'Ти підбигаєш у дальній кут містка і бачиш чоловіка, який дуже стікає кровью',
+    options: [
+      {
+        text: '"Як я можу тобі допомгти?"',
+        nextText: 19,
+      },
+    ]
+  },
+  {
+    id: 19,
+    text: `Чоловік ледве вимовляє "Слухай мене уважно...мені вже не допомогти...проте на кораблі є ще безліч людей...і завдяки тобі...в них ще може бути шанс"`,
+    options: [
+      {
+        text: 'Слухати далі',
+        nextText: 20,
+      },
+    ]
+  },
+  {
+    id: 20,
+    text: `"Тобі треба повернутися до панелі керування і... (каже порядок дій, не можу придумати щоб виглядало не безглуздо)"`,
+    options: [
+      {
+        text: 'Записати',
+        nextText: 21,
+      },
+    ]
+  },
+  {
+    id: 21,
+    text: `Пощастило, що ти забрав той блокнот "Завдяки цим діям корабель має вирівняти рух, стати на автопілот і полетіти на нашу базу"`,
+    options: [
+      {
+        text: '"Зрозумів"',
+        nextText: 22,
+      },
+    ]
+  },
+  {
+    id: 22,
+    text: 'Ти повертаєшся. Знервованний шукаєш очима всі потрібні елементи керування. Ціна твоєї помилки занадто велика',
+    options: [
+      {
+        text: `"Розпочати"`,
+        nextText: 23,
+      },
+    ]
+  },
+  {
+    id: 23,
+    text: `Ти дістаєш блокнот і згідно запису робишь необхідні дії`,
+    options: [
+      {
+        text: 'Lorem ipsum dolor sit amet consectetur adipisicing elit.',
+        nextText: 25,
+      },
+      {
+        text: 'Elit ipsum dolor sit adipisicing consectetur amet lorem.',
+        nextText: 26,
+      },
+      {
+        text: 'Lorem consectetur sit dolor amet ipsum adipisicing elit.',
+        nextText: 26,
+      },
+      {
+        text: 'Lorem ipsum dolor sit consectetur amet elit adipisicing.',
+        nextText: 26,
+      },
+    ]
+  },
+  {
+    id: 25,
+    text: 'Ти все зробив правильно! Зореліт вирівняв рух і полетів додому. Здається, щойно ти врятував себе та безліч інших людських життів. Щасливої дороги!',
+    options: [
+      {
+        text: '<3',
+        nextText: -1,
+      },
+    ]
+  },
+  {
+    id: 26,
+    text: 'Мабудь через твій поганий почерк ти помилився і тепер цей космічний корабель та всіх, хто на ньому, зможе врятувати тільки диво',
+    options: [
+      {
+        text: 'Спробувати ще раз',
+        nextText: -1,
+      },
+    ]
+  },
+  {
+    id: 27,
+    text: 'Несподівано ти чуєш чийсь голос "Сюди, скоріше!"',
+    options: [
+      {
+        text: 'Побігти на голос',
+        nextText: 28,
+      },
+    ]
+  },
+  {
+    id: 28,
+    text: 'Ти підбигаєш у дальній кут містка і бачиш чоловіка, який дуже стікає кровью',
+    options: [
+      {
+        text: `"Як я можу тобі допомгти?"`,
+        nextText: 29,
+      },
+    ]
+  },
+  {
+    id: 29,
+    text: `Чоловік ледве вимовляє
+    "Слухай мене уважно... мені вже не допомогти... проте на кораблі є ще безліч людей... і завдяки тобі... в них ще може бути шанс"""`,
+    options: [
+      {
+        text: `Слухати далі`,
+        nextText: 30,
+      },
+    ]
+  },
+  {
+    id: 30,
+    text: `Тобі потрібно повернутися до панелі керування і... (каже порядок дій, не можу придумати щоб виглядало не безглуздо)`,
+    options: [
+      {
+        text: `"Для чого це?"`,
+        nextText: 31,
+      },
+    ]
+  },
+  {
+    id: 31,
+    text: `"Завдяки цим діям корабель має вирівняти рух, стати на автопілот і полетіти на нашу базу"`,
+    options: [
+      {
+        text: `"Зрозумів"`,
+        nextText: 32,
+      },
+    ]
+  },
+  {
+    id: 32,
+    text: 'Ти повертаєшся. Знервованний шукаєш очима всі потрібні елементи керування. Ціна твоєї помилки занадто велика',
+    options: [
+      {
+        text: `Розпочати`,
+        nextText: 33,
+      },
+    ]
+  },
+  {
+    id: 33,
+    text: `Ти згадуєш такий порядок необхідих дій`,
+    options: [
+      {
+        text: 'Lorem ipsum dolor sit amet consectetur adipisicing elit.',
+        nextText: 25,
+      },
+      {
+        text: 'Elit ipsum dolor sit adipisicing consectetur amet lorem.',
+        nextText: 34,
+      },
+      {
+        text: 'Lorem consectetur sit dolor amet ipsum adipisicing elit.',
+        nextText: 34,
+      },
+      {
+        text: 'Lorem ipsum dolor sit consectetur amet elit adipisicing.',
+        nextText: 34,
+      },
+    ]
+  },
+  {
+    id: 34,
+    text: `Нажаль ти погано запам'ятав, що треба робити, і тепер цей космічний корабель та всіх, хто на ньому, зможе врятувати тільки диво`,
+    options: [
+      {
+        text: `Try again`,
+        nextText: -1,
+      }
+    ]
+  },
 ]
 
-startGame();
+startGame()
