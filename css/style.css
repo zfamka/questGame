@@ -37,3 +37,14 @@ button {
   color: rgb(203, 202, 199);
   cursor: pointer;
 }
+
+.a {
+  opacity: 0.5;
+  transition: 2s;
+}
+
+.b {
+  opacity: 1;
+  transition: 2s;
+}
+
