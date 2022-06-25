@@ -1,13 +1,28 @@
 const textElement = document.querySelector('.text');
 const optionButtonsElement = document.querySelector('.buttons');
 
+// function removeOpacityTransition() {
+//   optionButtonsElement.addEventListener('click', () => {
+//     optionButtonsElement.classList.remove('a')
+//   });
+// }
+// function addOpacityTransition() {
+//   optionButtonsElement.addEventListener('click', () => {
+//     optionButtonsElement.classList.add('b')
+//   });
+// }
+
 function startGame() {
   showTextNode(1)
 }
 
 function showTextNode(textNodeIndex) {
-  const textNode = textNodes.find(textNode => textNode.id === textNodeIndex);
+  const textNode = textNodes.find(elem => elem.id === textNodeIndex);
   textElement.textContent = textNode.text
+  console.log(textElement)
+  console.log(optionButtonsElement)
+  // removeOpacityTransition();
+  // addOpacityTransition();
   while (optionButtonsElement.firstChild) {
     optionButtonsElement.removeChild(optionButtonsElement.firstChild)
   }
@@ -18,11 +33,9 @@ function showTextNode(textNodeIndex) {
     button.addEventListener('click', () => {
       selectOption(option);
     })
-    optionButtonsElement.appendChild(button);
-
+    optionButtonsElement.appendChild(button).classList.remove('a');
   });
 };
-
 
 function selectOption(option) {
   const nextTextNodeId = option.nextText
