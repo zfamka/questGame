@@ -5,14 +5,18 @@
 
 body {
   background-color: rgb(23, 21, 21);
-  font-family: 'Bebas Neue', cursive;
+  font-family: "Bebas Neue", cursive;
   user-select: none;
 }
 
-.container {
+.mainContent {
   width: 600px;
   margin: 0 auto;
   padding-top: 40px;
+}
+
+.mainContent img {
+  border-radius: 40px;
 }
 
 .text {
@@ -23,28 +27,35 @@ body {
   text-align: center;
 }
 
-img {
-  border-radius: 40px;
-}
-
-button {
+.buttons button {
   display: block;
-  margin: 0 auto;
-  background-color: rgb(23, 21, 21);
+  margin: 20px auto;
   border: 0;
+  padding: 20px;
+  background-color: rgb(23, 21, 21);
+  color: rgb(85, 100, 73);
   font-size: 16px;
-  margin-bottom: 20px;
-  color: rgb(203, 202, 199);
   cursor: pointer;
+  border-radius: 25%;
+  border-color: rgb(205, 242, 185);
+  border: 2px solid rgb(193, 243, 182);
+  animation: choiseOpacity 2s 1;
 }
 
-.a {
-  opacity: 0.5;
-  transition: 2s;
+.buttons button:hover {
+  border: 2px solid rgb(57, 145, 64);
+  box-shadow: 3px 3px 11px 3px rgb(58, 149, 64);
+  transition: 400ms;
+  color: rgb(41, 142, 11);
+  font-size: 18px;
 }
 
-.b {
-  opacity: 1;
-  transition: 2s;
-}
+@keyframes choiseOpacity { 
+  0% {
+    opacity: 0;
+  }
 
+  100% {
+    opacity: 1;
+  }
+}
