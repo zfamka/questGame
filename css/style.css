@@ -21,10 +21,11 @@ body {
 
 .text {
   color: rgb(129, 149, 149);
-  padding: 40px 0;
+  padding: 20px 0;
   font-size: 22px;
   letter-spacing: 4px;
   text-align: center;
+  animation: choiseOpacity 2s 1;
 }
 
 .buttons button {
