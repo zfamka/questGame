@@ -1,6 +1,5 @@
 const textElement = document.querySelector('.text');
 const optionButtonsElement = document.querySelector('.buttons');
-const allText = document.querySelector('.take-all-text');
 
 function startGame() {
   showTextNode(1)
@@ -8,13 +7,11 @@ function startGame() {
 
 function showTextNode(textNodeIndex) {
   const textNode = textNodes.find(elem => elem.id === textNodeIndex);
-  // textElement.textContent = textNode.text;
   const textElem = document.createElement('div');
   textElem.textContent = textNode.text;
   textElem.classList.add('text');
   textElement.append(textElem);
-  console.log(allText)
-  allText.firstChild.remove();
+  textElement.firstChild.remove();
   while (optionButtonsElement.firstChild) {
     optionButtonsElement.removeChild(optionButtonsElement.firstChild);
   }
