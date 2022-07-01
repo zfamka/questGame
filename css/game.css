@@ -44,11 +44,10 @@ body {
 }
 
 .buttons button:hover {
-  border: 2px solid rgb(57, 145, 64);
+  transform: scale(1.2);
   box-shadow: 3px 3px 11px 3px rgb(58, 149, 64);
   transition: 400ms;
-  color: rgb(41, 142, 11);
-  font-size: 18px;
+  color: rgb(107, 219, 73);
 }
 
 @keyframes choiseOpacity { 
