@@ -30,7 +30,8 @@ body {
   padding: 30px 120px;
   font-size: 40px;
   border-radius: 100px;
-  margin-bottom: 80px;
+  margin-bottom: 10px;
+  background-color: rgb(171, 142, 142);
 }
 
 .btn:hover {
@@ -38,6 +39,7 @@ body {
   box-shadow: 3px 3px 11px 3px rgb(58, 149, 64);
   transition: 200ms;
   color: rgb(107, 219, 73);
+  background-color: rgb(225, 255, 179);
   transform: scale(1.2);
-  transform-origin: 0% 0% 0px;
+  /* transform-origin: 0% 0% 0px; */
 }
