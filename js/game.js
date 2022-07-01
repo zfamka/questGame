@@ -1,6 +1,10 @@
 const textElement = document.querySelector('.text');
 const optionButtonsElement = document.querySelector('.buttons');
 
+function backToMenu() {
+
+}
+
 function startGame() {
   showTextNode(1)
 }

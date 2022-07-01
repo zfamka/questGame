@@ -29,17 +29,28 @@ body {
   border: 1px solid rgb(180, 179, 179);
   padding: 30px 120px;
   font-size: 40px;
-  border-radius: 100px;
+  border-radius: 30px;
   margin-bottom: 10px;
   background-color: rgb(171, 142, 142);
 }
 
 .btn:hover {
-  border-color:rgb(133, 254, 106);
-  box-shadow: 3px 3px 11px 3px rgb(58, 149, 64);
-  transition: 200ms;
-  color: rgb(107, 219, 73);
-  background-color: rgb(225, 255, 179);
+  border-color: rgb(255 0 0);
+  box-shadow: 3px 3px 11px 3px rgb(255 0 0);
+  transition: 600ms;
+  color: rgb(195 41 41);
+  background-color: rgb(109 35 35);
   transform: scale(1.2);
-  /* transform-origin: 0% 0% 0px; */
+  animation-name: spin;
+  animation-duration: 300ms;
+  animation-timing-function: linear; 
+}
+
+@keyframes spin {
+  from {
+      transform:rotate(0deg);
+  }
+  to {
+      transform:rotate(180deg);
+  }
 }
