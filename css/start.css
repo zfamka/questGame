@@ -34,10 +34,10 @@ body {
 }
 
 .btn:hover {
-  border-color:rgb(57, 145, 64);
+  border-color:rgb(133, 254, 106);
   box-shadow: 3px 3px 11px 3px rgb(58, 149, 64);
   transition: 200ms;
-  color: rgb(41, 142, 11);
+  color: rgb(107, 219, 73);
   transform: scale(1.2);
   transform-origin: 0% 0% 0px;
 }
