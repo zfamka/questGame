@@ -41,12 +41,13 @@ body {
   border-color: rgb(205, 242, 185);
   border: 2px solid rgb(193, 243, 182);
   animation: choiseOpacity 2s 1;
+  transition: linear 0.4s all;
 }
 
 .buttons button:hover {
   transform: scale(1.2);
   box-shadow: 3px 3px 11px 3px rgb(58, 149, 64);
-  transition: 400ms;
+  transition: linear 0.4s all;
   color: rgb(107, 219, 73);
 }
 

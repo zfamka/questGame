@@ -32,25 +32,14 @@ body {
   border-radius: 30px;
   margin-bottom: 10px;
   background-color: rgb(171, 142, 142);
+  transition: linear 0.3s all;
 }
 
 .btn:hover {
   border-color: rgb(255 0 0);
   box-shadow: 3px 3px 11px 3px rgb(255 0 0);
-  transition: 600ms;
+  transition: linear 0.3s all;
   color: rgb(195 41 41);
   background-color: rgb(109 35 35);
   transform: scale(1.2);
-  animation-name: spin;
-  animation-duration: 300ms;
-  animation-timing-function: linear; 
-}
-
-@keyframes spin {
-  from {
-      transform:rotate(0deg);
-  }
-  to {
-      transform:rotate(180deg);
-  }
 }
