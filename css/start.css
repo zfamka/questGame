@@ -22,7 +22,7 @@ body {
 .btn__inner {
   display: flex;
   flex-direction: column;
-  margin-top: 50px;
+  margin-top: 340px;
 }
 
 .btn {
@@ -41,11 +41,30 @@ body {
 
 .btn:hover {
   transition: linear 0.3s all;
-  color: rgb(249, 245, 8);
+  color: #F0CE3C;
   transform: scale(1.2);
   opacity: 1;
 }
 
+.logo {
+  position: relative;
+  right: 170px;
+}
+
 img {
+  position: absolute;
   transform: scale(1.5);
+  transition: 500ms linear;
+}
+
+.first_logo {
+  width: 351px;
+}
+
+body {
+  transition: 2s;
+}
+
+.a {
+  opacity: 0;
 }
