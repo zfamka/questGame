@@ -17,3 +17,10 @@ startGame.addEventListener('click', () => {
   }, 1000);
 
 });
+
+const btn = document.querySelector('.start_game');
+const audio = document.querySelector('audio');
+btn.addEventListener('click', () => {
+  // audio.currentTime = 0;
+  audio.play();
+});
