@@ -1,5 +1,7 @@
 const prepareChoise = document.querySelectorAll('.prepare__choise a');
 const mainMenuOst = document.querySelector('.main__menu-ost');
+const prepareYes = document.querySelector('.prepare__choise :first-child');
+const prepareNo = document.querySelector('.prepare__choise :last-child');
 
 prepareChoise.forEach(elem => {
   elem.addEventListener('click', () => {
@@ -11,18 +13,21 @@ prepareChoise.forEach(elem => {
   });
 });
 
-const prepareYes = document.querySelector('.prepare__choise :first-child');
-const prepareNo = document.querySelector('.prepare__choise :last-child');
+function mouseJoke(elem, secondElem) {
+  secondElem.addEventListener('mouseover', () => {
+    if (secondElem.textContent === 'No') {
+      secondElem.textContent = 'Yes';
+      elem.textContent = 'No';
+    }
+  });
+  elem.addEventListener('mouseover', () => {
+    if (elem.textContent === 'No') {
+      elem.textContent = 'Yes';
+      secondElem.textContent = 'No';
+    }
+  })
+};
 
-prepareNo.addEventListener('mouseover', () => {
-  if (prepareNo.textContent === 'No') {
-    prepareNo.textContent = 'Yes';
-    prepareYes.textContent = 'No';
-  }
-})
-prepareNo.addEventListener('mouseout', () => {
-  prepareNo.textContent = 'No'
-  prepareYes.textContent = 'Yes';
-});
+mouseJoke(prepareYes, prepareNo);
 
 
