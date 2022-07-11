@@ -17,12 +17,14 @@ body {
   width: 600px;
   margin: 0 auto;
   padding-top: 100px;
+  position: relative;
 }
 
 .btn__inner {
   display: flex;
   flex-direction: column;
   margin-top: 340px;
+  display: none;
 }
 
 .btn {
@@ -42,23 +44,25 @@ body {
 .btn:hover {
   transition: linear 0.3s all;
   color: #F0CE3C;
-  transform: scale(1.2);
   opacity: 1;
+  
 }
 
 .logo {
   position: relative;
   right: 170px;
+  display: none;
 }
 
 img {
   position: absolute;
   transform: scale(1.5);
-  transition: 500ms linear;
+  transition: 1500ms linear;
 }
 
-.first_logo {
+.first__logo {
   width: 351px;
+  display: none;
 }
 
 body {
@@ -67,4 +71,38 @@ body {
 
 .a {
   opacity: 0;
+}
+
+@keyframes fonstSize { 
+  0% {
+   transform: scale(0.9);
+  }
+  100% {
+    transform: scale(1.2);
+  }
+}
+
+.prepare {
+  position: absolute;
+  font-size: 50px;
+  color: rgb(141, 91, 91);
+  top: 300px;
+}
+
+.prepare__choise {
+  display: flex;
+  justify-content: space-around;
+}
+
+.prepare__choise a {
+  color: #d25e5e;
+  font-size: 50px;
+  text-decoration: none;
+  transition: 500ms;
+}
+
+.prepare__choise a:hover {
+  color: #a40000;
+  transition: 500ms;
+  transform: scale(1.2);
 }
