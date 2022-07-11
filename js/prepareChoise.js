@@ -9,4 +9,20 @@ prepareChoise.forEach(elem => {
     mainMenuOst.play();
     mainMenuOst.loop = true;
   });
+});
+
+const prepareYes = document.querySelector('.prepare__choise :first-child');
+const prepareNo = document.querySelector('.prepare__choise :last-child');
+
+prepareNo.addEventListener('mouseover', () => {
+  if (prepareNo.textContent === 'No') {
+    prepareNo.textContent = 'Yes';
+    prepareYes.textContent = 'No';
+  }
 })
+prepareNo.addEventListener('mouseout', () => {
+  prepareNo.textContent = 'No'
+  prepareYes.textContent = 'Yes';
+});
+
+

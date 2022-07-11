@@ -30,4 +30,3 @@ startGame.addEventListener('click', () => {
 });
 
 
-

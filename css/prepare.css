@@ -15,10 +15,16 @@
   font-size: 50px;
   text-decoration: none;
   transition: 500ms;
+  width: 50%;
+  text-align: center;
 }
 
 .prepare__choise a:hover {
   color: #a40000;
   transition: 500ms;
   transform: scale(1.2);
+}
+
+.prepare__choise a:hover:last-child {
+  
 }
