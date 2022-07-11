@@ -1,13 +1,9 @@
 const textElement = document.querySelector('.text');
 const optionButtonsElement = document.querySelector('.buttons');
 
-function backToMenu() {
-
-}
-
 function startGame() {
   showTextNode(1)
-}
+};
 
 function showTextNode(textNodeIndex) {
   const textNode = textNodes.find(elem => elem.id === textNodeIndex);

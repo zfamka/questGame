@@ -1,3 +1,5 @@
+@import url(prepare.css);
+
 * {
   padding: 0;
   margin: 0;
@@ -69,7 +71,7 @@ body {
   transition: 2s;
 }
 
-.a {
+.hideElem {
   opacity: 0;
 }
 
@@ -82,27 +84,3 @@ body {
   }
 }
 
-.prepare {
-  position: absolute;
-  font-size: 50px;
-  color: rgb(141, 91, 91);
-  top: 300px;
-}
-
-.prepare__choise {
-  display: flex;
-  justify-content: space-around;
-}
-
-.prepare__choise a {
-  color: #d25e5e;
-  font-size: 50px;
-  text-decoration: none;
-  transition: 500ms;
-}
-
-.prepare__choise a:hover {
-  color: #a40000;
-  transition: 500ms;
-  transform: scale(1.2);
-}
