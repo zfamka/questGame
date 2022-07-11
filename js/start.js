@@ -11,9 +11,8 @@ prepareChoise.addEventListener('click', () => {
   document.querySelector('.logo').style.display = 'block';
   document.querySelector('.btn__inner').style.display = 'flex';
   mainMenuOst.play();
+  mainMenuOst.loop = true;
 });
-
-
 
 startGame.addEventListener('click', () => {
   secondLogo.style.opacity = '0';
@@ -44,7 +43,6 @@ const btnChangeFocus = document.querySelectorAll('.btn');
 const changeFocusAudio = document.querySelector('.btn__changeFocus-audio');
 btnChangeFocus.forEach(elem => {
   elem.addEventListener('mouseover', () => {
-    changeFocusAudio.currentTime = 10000;
     changeFocusAudio.play();
   })
 });
