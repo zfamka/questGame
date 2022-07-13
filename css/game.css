@@ -9,10 +9,38 @@ body {
   user-select: none;
 }
 
+.preHistory {
+  display: flex;
+  flex-direction: column;
+  color: white;
+  font-size: 30px;
+  padding: 100px;
+  animation: choiseOpacity 2s 1;
+  transition: linear 0.4s all;
+}
+
+.preHistory p {
+  overflow-wrap: break-word;
+}
+
+.next {
+  margin: 0 auto;
+  cursor: pointer;
+  border: 2px solid rgb(53, 62, 53);
+  border-radius: 20px;
+  padding: 10px 15px;
+}
+
+.next:hover {
+  color: cadetblue;
+  background-color: aquamarine;
+}
+
 .mainContent {
   width: 600px;
   margin: 0 auto;
   padding-top: 40px;
+  display: none;
 }
 
 .mainContent img {

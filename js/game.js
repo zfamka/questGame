@@ -18,10 +18,16 @@ function showTextNode(textNodeIndex) {
 
   textNode.options.forEach(option => {
     const button = document.createElement('button');
-    button.textContent = option.text
+    button.textContent = option.text;
+
+    const gameChangeHoverAudio = document.querySelector('.game__changeHover-audio');
+    button.addEventListener('click', () => {
+      gameChangeHoverAudio.play();
+    });
+
     button.addEventListener('click', () => {
       selectOption(option);
-    })
+    });
     optionButtonsElement.appendChild(button);
   });
 };
