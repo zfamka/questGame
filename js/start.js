@@ -1,18 +1,18 @@
 const firstLogo = document.querySelector('.first__logo');
 const secondLogo = document.querySelector('.second__logo');
-const startGame = document.querySelector('.start__game');
+const startGames = document.querySelector('.start__game');
 const body = document.querySelector('body');
 const prepare = document.querySelector('.prepare');
 const startGameAudio = document.querySelector('.start__game-audio');
 const btn = document.querySelectorAll('.btn');
 
-startGame.addEventListener('click', () => {
+startGames.addEventListener('click', () => {
   secondLogo.style.opacity = '0';
   firstLogo.style.opacity = '1';
   firstLogo.style.display = 'block';
-  startGame.style.animation = 'fonstSize 2.5s 1';
-  startGame.style.transition = '1.5s'
-  startGame.style.color = 'rgb(117, 5, 5)';
+  startGames.style.animation = 'fonstSize 2.5s 1';
+  startGames.style.transition = '1.5s'
+  startGames.style.opacity = '1';
   startGameAudio.play();
 
   btn.forEach(elem => {
@@ -28,5 +28,3 @@ startGame.addEventListener('click', () => {
 
   }, 1500);
 });
-
-

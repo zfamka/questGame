@@ -7,6 +7,10 @@ body {
   background-color: rgb(23, 21, 21);
   font-family: "Bebas Neue", cursive;
   user-select: none;
+  background-image: url("../img/main_menu_bg2.jpg");
+  height: 100vh;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .container {
@@ -28,24 +32,45 @@ body {
 }
 
 .btn {
-  display: inline-block;
-  margin: 30px 0;
-  text-align: center;
-  text-decoration: none;
-  color: rgb(180, 179, 179);
-  font-size: 40px;
-  border-radius: 30px;
-  margin-bottom: 10px;
-  transition: linear 0.3s all;
-  z-index: 2;
-  opacity: 0.7;
+  width: 270px;
 }
 
 .btn:hover {
-  transition: linear 0.3s all;
-  color: #F0CE3C;
+  transition: linear 0.5s all;
+}
+
+.menu_btn-start {
+  position: absolute;
+  top: 340px;
+  left: 40px;
+  opacity: 0.5;
+}
+.menu_btn-start:hover {
   opacity: 1;
-  
+}
+
+.menu_btn-setting {
+  position: absolute;
+  top: 440px;
+  left: 40px;
+  opacity: 0.5;
+}
+.menu_btn-setting:hover {
+  opacity: 1;
+}
+
+.menu_btn-info {
+  position: absolute;
+  top: 540px;
+  left: 40px;
+  opacity: 0.5;
+}
+.menu_btn-info:hover {
+  opacity: 1;
+}
+
+.menu_btn-blood {
+  opacity: 0;
 }
 
 .logo {
@@ -54,13 +79,16 @@ body {
   display: none;
 }
 
-img {
+.second__logo {
   position: absolute;
   transform: scale(1.5);
   transition: 1500ms linear;
 }
 
 .first__logo {
+  position: absolute;
+  transform: scale(1.5);
+  transition: 1500ms linear;
   width: 351px;
   display: none;
 }

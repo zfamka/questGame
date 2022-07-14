@@ -33,7 +33,7 @@ function showTextNode(textNodeIndex) {
 };
 
 function selectOption(option) {
-  const nextTextNodeId = option.nextText
+  const nextTextNodeId = option.nextText;
   if (nextTextNodeId <= 0) {
     return startGame()
   }
