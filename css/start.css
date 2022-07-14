@@ -27,50 +27,27 @@ body {
 .btn__inner {
   display: flex;
   flex-direction: column;
-  margin-top: 340px;
+  margin-top: 350px;
   display: none;
 }
 
 .btn {
-  width: 270px;
+  color: rgb(198, 78, 22);
+  cursor: pointer;
+  margin-top: 30px;
+  font-size: 25px;
+  text-align: center;
+  border: 2px solid rgb(100, 6, 47);
+  background-color: rgb(40, 14, 25);
+  opacity: 0.5;
+  border-radius: 30px;
+  padding: 15px 30px;
+  transition: 0.3s linear;
 }
 
 .btn:hover {
-  transition: linear 0.5s all;
-}
-
-.menu_btn-start {
-  position: absolute;
-  top: 340px;
-  left: 40px;
-  opacity: 0.5;
-}
-.menu_btn-start:hover {
   opacity: 1;
-}
-
-.menu_btn-setting {
-  position: absolute;
-  top: 440px;
-  left: 40px;
-  opacity: 0.5;
-}
-.menu_btn-setting:hover {
-  opacity: 1;
-}
-
-.menu_btn-info {
-  position: absolute;
-  top: 540px;
-  left: 40px;
-  opacity: 0.5;
-}
-.menu_btn-info:hover {
-  opacity: 1;
-}
-
-.menu_btn-blood {
-  opacity: 0;
+  transition: 0.3s linear;
 }
 
 .logo {
