@@ -7,6 +7,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="css/start.css">
   <link rel="stylesheet" href="css/prepare.css">
+  <link rel="stylesheet" href="css/settings.css">
   <title>menu</title>
 </head>
 
@@ -26,16 +27,26 @@
     </div>
     <div class="btn__inner">
       <div class="btn start__game">Почати гру</div>
+      <div class="btn setting">Налаштування</div>
       <div class="btn">Якийсь текст</div>
-      <div class="btn">Налаштування</div>
       <audio class="start__game-audio" src="sounds/mainMenuBtnClickSound.mp3"></audio>
       <audio class="btn__changeFocus-audio" src="sounds/menuBtnSoundHover.mp3"></audio>
       <audio class="main__menu-ost" src="sounds/mainMenuOst.mp3"></audio>
     </div>
   </div>
+  <div class="settings">
+    <input type="range">
+    <input type="range">
+    <select name="" id="">
+      <option value="English">English</option>
+      <option value="Ukrainian">Ukrainian</option>
+    </select>
+    <a class="back__to__menu" href="#">Back to menu</a>
+  </div>
   <script src="js/start.js"></script>
   <script src="js/changeFocusMenu.js"></script>
   <script src="js/prepareChoise.js"></script>
+  <script src="js/settings.js"></script>
 </body>
 
 </html>
