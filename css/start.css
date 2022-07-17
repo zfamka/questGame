@@ -28,7 +28,6 @@ body {
 .btn__inner {
   display: flex;
   flex-direction: column;
-  margin-top: 350px;
   display: none;
 }
 
@@ -53,7 +52,7 @@ body {
 
 .logo {
   position: relative;
-  right: 170px;
+  right: 30px;
   display: none;
 }
 
@@ -85,3 +84,33 @@ body {
 }
 
 
+html {
+  font-size: 62.5%;
+}
+
+.wrap {
+  transform-style: preserve-3d;
+  transform: perspective(100rem);
+}
+
+.parallax {
+  --rX: 0;
+  --rY: 0;
+  --bX: 50%;
+  --bY: 80%;
+
+  width: 30rem;
+  height: 36rem;
+
+  position: relative;
+  transform: rotateX(calc(var(--rX) * 1deg)) rotateY(calc(var(--rY) * 1deg));
+
+  background-position: var(--bX) var(--bY);
+  background-size: 40rem auto;
+
+  transition: transform .6s 1s;
+}
+
+.parallax--active {
+  transition: none;
+}
