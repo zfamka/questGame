@@ -5,6 +5,7 @@ const volumeRange = document.getElementById('volume');
 const allAudio = document.querySelectorAll('audio');
 
 volumeRange.oninput = () => {
+  console.log(volumeRange.value)
   allAudio.forEach(elem => {
     if (volumeRange.value == 10) {
       elem.volume = 1;
