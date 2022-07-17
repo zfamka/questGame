@@ -4,4 +4,8 @@ btnChangeFocus.forEach(elem => {
   elem.addEventListener('mouseover', () => {
     changeFocusAudio.play();
   })
+  elem.addEventListener('click', () => {
+    startGameAudio.currentTime = 0
+    startGameAudio.play();
+  })
 });
