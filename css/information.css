@@ -30,13 +30,13 @@
   width: 120px;
 }
 
-.setting_volume {
+.setting__volume {
   display: flex;
   justify-content: space-between;
   width: 200px;
 }
 
-.back__to__menu {
+.backToMenu {
   font-size: 34px;
   color: rgb(198, 78, 22);
   text-decoration: none;
@@ -48,7 +48,7 @@
   border-radius: 20px;
 }
 
-.back__to__menu:hover {
+.backToMenu:hover {
   opacity: 1;
   transition: 1s linear;
 }

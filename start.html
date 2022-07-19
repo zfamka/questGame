@@ -35,15 +35,16 @@
     </div>
   </div>
   <div class="settings">
-    <div class="setting_volume">
+    <div class="setting__volume">
       <label for="volume">VOLUME</label>
       <input type="range" id="volume" name="volume" min="0" max="10">
     </div>
     <select name="" id="">
-      <option value="English">English</option>
       <option value="Ukrainian">Ukrainian</option>
+      <option value="English">English</option>
     </select>
-    <a class="back__to__menu" href="#">Back to menu</a>
+    <a class="backToMenu setting__backToMenu" href="#">Back to menu</a>
+    <audio class="setting__audioBackToMenu" src="sounds/backToMenuBtn.mp3"></audio>
   </div>
 
   <div class="aboutUs">
@@ -59,7 +60,7 @@
     <h1>Name</h1>
     <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Mollitia, earum.</p>
     <hr>
-    <a class="back__to__menu" href="#">Back to menu</a>
+    <a class="backToMenu" href="#">Back to menu</a>
   </div>
   <script src="js/start.js"></script>
   <script src="js/changeFocusMenu.js"></script>
