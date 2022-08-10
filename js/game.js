@@ -1,5 +1,6 @@
 const textElement = document.querySelector('.text');
 const optionButtonsElement = document.querySelector('.buttons');
+const scrim = document.querySelector('.scrim');
 
 function startGame() {
   showTextNode(1)
@@ -30,6 +31,9 @@ function showTextNode(textNodeIndex) {
     });
     optionButtonsElement.appendChild(button);
   });
+
+
+  scare(textNode.id);
 };
 
 function selectOption(option) {
@@ -38,7 +42,16 @@ function selectOption(option) {
     return startGame()
   }
   showTextNode(nextTextNodeId)
-}
+};
+
+function scare(elem) {
+  if (elem === 3) {
+    setTimeout(() => {
+      scrim.play();
+    }, 500);
+  }
+};
+
 
 const textNodes = [
   {
