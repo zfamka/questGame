@@ -17,7 +17,21 @@ function showTextNode(textNodeIndex) {
     optionButtonsElement.removeChild(optionButtonsElement.firstChild);
   }
 
-  textNode.options.forEach(option => {
+
+  btnSounds(textNode.options);
+  scare(textNode.id);
+};
+
+function selectOption(option) {
+  const nextTextNodeId = option.nextText;
+  if (nextTextNodeId <= 0) {
+    return startGame()
+  }
+  showTextNode(nextTextNodeId)
+};
+
+function btnSounds(elem) {
+  elem.forEach(option => {
     const button = document.createElement('button');
     button.textContent = option.text;
 
@@ -31,18 +45,7 @@ function showTextNode(textNodeIndex) {
     });
     optionButtonsElement.appendChild(button);
   });
-
-
-  scare(textNode.id);
-};
-
-function selectOption(option) {
-  const nextTextNodeId = option.nextText;
-  if (nextTextNodeId <= 0) {
-    return startGame()
-  }
-  showTextNode(nextTextNodeId)
-};
+}
 
 function scare(elem) {
   if (elem === 3) {
@@ -51,7 +54,6 @@ function scare(elem) {
     }, 500);
   }
 };
-
 
 const textNodes = [
   {
