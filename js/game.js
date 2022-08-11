@@ -9,6 +9,14 @@ function startGame() {
 function showTextNode(textNodeIndex) {
   const textNode = textNodes.find(elem => elem.id === textNodeIndex);
   const textElem = document.createElement('div');
+
+  const image = document.querySelector('.image');
+  image.style.background = `url(../img/main_menu_bg.jpg`;
+
+  if (textNode.id === 3) {
+    image.style.background = 'url(../img/scary_face.jfif)';
+  }
+
   textElem.textContent = textNode.text;
   textElem.classList.add('text');
   textElement.append(textElem);
@@ -49,9 +57,7 @@ function btnSounds(elem) {
 
 function scare(elem) {
   if (elem === 3) {
-    setTimeout(() => {
-      scrim.play();
-    }, 500);
+    scrim.play();
   }
 };
 

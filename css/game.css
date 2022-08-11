@@ -36,6 +36,11 @@ body {
   background-color: aquamarine;
 }
 
+.image {
+  color: red;
+  height: 30vh;
+}
+
 .mainContent {
   width: 600px;
   margin: 0 auto;
