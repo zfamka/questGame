@@ -1,6 +1,10 @@
 const textElement = document.querySelector('.text');
 const optionButtonsElement = document.querySelector('.buttons');
 const scrim = document.querySelector('.scrim');
+const image = document.querySelector('.image');
+image.style.background = `url(../img/main_menu_bg.jpg`;
+image.style.backgroundRepeat = 'no-repeat center';
+image.style.backgroundSize = 'cover';
 
 function startGame() {
   showTextNode(1)
@@ -10,11 +14,9 @@ function showTextNode(textNodeIndex) {
   const textNode = textNodes.find(elem => elem.id === textNodeIndex);
   const textElem = document.createElement('div');
 
-  const image = document.querySelector('.image');
-  image.style.background = `url(../img/main_menu_bg.jpg`;
-
   if (textNode.id === 3) {
-    image.style.background = 'url(../img/scary_face.jfif)';
+    image.style.backgroundImage = 'url(../img/scary_face.jfif)';
+    console.log(image)
   }
 
   textElem.textContent = textNode.text;

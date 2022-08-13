@@ -84,6 +84,11 @@ body {
   color: rgb(107, 219, 73);
 }
 
+.image {
+  animation: choiseOpacity 2s 1;
+  transition: linear 0.4s all;
+}
+
 @keyframes choiseOpacity { 
   0% {
     opacity: 0;
