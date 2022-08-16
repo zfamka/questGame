@@ -9,7 +9,13 @@ function addGameImage(gameObj, id, gameImg, url) {
     gameImg.style.backgroundRepeat = 'no-repeat center';
     gameImg.style.backgroundSize = 'cover';
   }
-}
+};
+
+function addSound(elem, id) {
+  if (elem === id) {
+    scrim.play();
+  }
+};
 
 function startGame() {
   showTextNode(1)
@@ -19,8 +25,9 @@ function showTextNode(textNodeIndex) {
   const textNode = textNodes.find(elem => elem.id === textNodeIndex);
   const textElem = document.createElement('div');
 
-  addGameImage(textNode.id, 1, image, 'url(../img/main_menu_bg.jpg');
-  addGameImage(textNode.id, 3, image, 'url(../img/scary_face.jfif');
+  addGameImage(textNode.id, 1, image, 'url(../img/main_menu_bg.jpg)');
+  addGameImage(textNode.id, 3, image, 'url(../img/scary_face.jfif)');
+  addSound(textNode.id, 3);
 
   textElem.textContent = textNode.text;
   textElem.classList.add('text');
@@ -32,7 +39,6 @@ function showTextNode(textNodeIndex) {
 
 
   btnSounds(textNode.options);
-  scare(textNode.id);
 };
 
 function selectOption(option) {
@@ -59,12 +65,6 @@ function btnSounds(elem) {
     optionButtonsElement.appendChild(button);
   });
 }
-
-function scare(elem) {
-  if (elem === 3) {
-    scrim.play();
-  }
-};
 
 const textNodes = [
   {
