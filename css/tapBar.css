@@ -1,0 +1,17 @@
+
+
+.tapProgress {
+  width: 500px;
+  height: 30px;
+  border: 1px solid yellow;
+  margin: 0 auto;
+}
+
+.tapPush {
+  padding: 10px 30px;
+  width: 50px;
+  border: 1px solid pink;
+  display: block;
+  margin: 0 auto;
+  text-align: center;
+}

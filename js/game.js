@@ -2,6 +2,7 @@ const textElement = document.querySelector('.text');
 const optionButtonsElement = document.querySelector('.buttons');
 const scrim = document.querySelector('.scrim');
 const image = document.querySelector('.image');
+const body = document.querySelector('body');
 
 function addGameImage(gameObj, id, gameImg, url) {
   if (gameObj === id) {
