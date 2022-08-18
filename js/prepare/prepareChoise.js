@@ -3,8 +3,19 @@ const mainMenuOst = document.querySelector('.main__menu-ost');
 const prepareYes = document.querySelector('.prepare__choise :first-child');
 const prepareNo = document.querySelector('.prepare__choise :last-child');
 
+const audio = document.querySelectorAll('audio');
+
+const settingsRange = document.querySelector('.settings__range');
+const storageVolume = localStorage.getItem('volume');
+settingsRange.value = storageVolume;
+
 prepareChoise.forEach(elem => {
   elem.addEventListener('click', () => {
+
+    audio.forEach(elem => {
+      elem.volume = storageVolume;
+    })
+
     prepare.style.display = 'none';
     document.querySelector('.logo').style.display = 'block';
     document.querySelector('.btn__inner').style.display = 'flex';

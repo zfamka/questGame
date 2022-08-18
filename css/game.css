@@ -98,3 +98,29 @@ body {
     opacity: 1;
   }
 }
+
+.scareOpa {
+  animation: scareOpacity 2s 1;
+  transition: linear 0.2s all;
+}
+
+@keyframes scareOpacity { 
+  0% {
+    opacity: 0.2;
+  }
+  20% {
+    opacity: 0.7;
+  }
+  40% {
+    opacity: 0.2;
+  }
+  60% {
+    opacity: 0.7;
+  }
+  80% {
+    opacity: 0.2;
+  }
+  100% {
+    opacity: 0.7;
+  }
+}

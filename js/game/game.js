@@ -4,6 +4,13 @@ const scrim = document.querySelector('.scrim');
 const image = document.querySelector('.image');
 const body = document.querySelector('body');
 
+
+const allAudio = document.querySelectorAll('audio')
+const volume = localStorage.getItem('volume');
+allAudio.forEach(elem => {
+  elem.volume = volume;
+})
+
 function addGameImage(gameObj, id, gameImg, url) {
   if (gameObj === id) {
     gameImg.style.background = url;
@@ -29,6 +36,10 @@ function showTextNode(textNodeIndex) {
   addGameImage(textNode.id, 1, image, 'url(../img/main_menu_bg.jpg)');
   addGameImage(textNode.id, 3, image, 'url(../img/scary_face.jfif)');
   addSound(textNode.id, 3);
+
+  if (textNode.id === 3) {
+    body.classList.add('scareOpa')
+  }
 
   textElem.textContent = textNode.text;
   textElem.classList.add('text');
