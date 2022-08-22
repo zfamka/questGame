@@ -8,13 +8,13 @@ const audio = document.querySelectorAll('audio');
 const settingsRange = document.querySelector('.settings__range');
 const storageVolume = localStorage.getItem('volume');
 settingsRange.value = storageVolume;
+audio.forEach(elem => {
+  elem.volume = storageVolume;
+})
 
 prepareChoise.forEach(elem => {
   elem.addEventListener('click', () => {
 
-    audio.forEach(elem => {
-      elem.volume = storageVolume;
-    })
 
     prepare.style.display = 'none';
     document.querySelector('.logo').style.display = 'block';
