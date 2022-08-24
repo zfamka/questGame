@@ -11,8 +11,7 @@ startTerminal.addEventListener('click', () => {
   startTerminal.style.display = 'none';
   terminalText.style.display = 'block';
   skipTerminal.style.display = 'block';
-  terminalSound.play();
-  terminalSound.loop = true;
+  // terminalSound.loop = true;
 
   function typeText() {
     let line = 0;
@@ -33,6 +32,7 @@ startTerminal.addEventListener('click', () => {
             return true
           }
         }
+        terminalSound.play();
         typeLine();
       }, 200);
     }
