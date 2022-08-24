@@ -4,10 +4,12 @@ const terminal = ['Планета Чіпуюхі.', 'Десь у галакти�
 
 const startTerminal = document.querySelector('.preHistory__startTerminal');
 const terminalText = document.querySelector('.preHistory__terminal');
+const skipTerminal = document.querySelector('.next');
 
 startTerminal.addEventListener('click', () => {
   startTerminal.style.display = 'none';
   terminalText.style.display = 'block';
+  skipTerminal.style.display = 'block';
   function typeText() {
     let line = 0;
     let count = 0;
