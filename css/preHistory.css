@@ -10,15 +10,18 @@
   width: 900px;
   border: 2px solid rgb(193, 243, 182);
   border-radius: 10%;
+  height: 40vh;
 }
 
 .preHistory p {
+  display: none;
   overflow-wrap: break-word;
   text-align: center;
   margin-bottom: 20px;
 }
 
 .next {
+  display: none;
   margin: 0 auto;
   padding: 20px 60px;
   background-color: rgb(23, 21, 21);
