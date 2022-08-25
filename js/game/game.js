@@ -49,6 +49,12 @@ function showTextNode(textNodeIndex) {
     optionButtonsElement.removeChild(optionButtonsElement.firstChild);
   }
 
+  if (textNode.id === 1) {
+    optionButtonsElement.style.display = 'none';
+    setTimeout(() => {
+      optionButtonsElement.style.display = 'block';
+    }, 21000)
+  }
 
   btnSounds(textNode.options);
 };

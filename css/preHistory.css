@@ -1,28 +1,54 @@
+@font-face {
+  font-family: 'Varino';
+  src: url(../fonts/VarinonormalRegular-1GXaM.ttf);
+}
+
 .preHistory {
   display: flex;
   flex-direction: column;
   margin: 50px auto;
   color: white;
   font-size: 30px;
-  padding: 40px;
+  padding: 20px 40px;
   animation: choiseOpacity 2s 1;
   transition: linear 0.4s all;
   width: 900px;
   border: 2px solid rgb(193, 243, 182);
   border-radius: 10%;
-  height: 40vh;
+  height: 65vh;
+  color: rgb(71, 118, 1);
 }
 
-.preHistory p {
+.preHistory__startTerminal {
+  width: 100px;
+  margin: 50px 0 0 50px;
+  cursor: pointer;
+}
+
+.preHistory__startTerminal:hover {
+  color: rgb(193, 243, 182);
+}
+
+.companyName {
   display: none;
-  overflow-wrap: break-word;
-  text-align: center;
+  font-family: 'Varino', sans-serif;
+  color: rgb(107, 178, 0);
+  padding-bottom: 20px;
+  animation: choiseOpacity 2s 1;
+  transition: linear 0.4s all;
+}
+
+.preHistory pre {
+  display: none;
   margin-bottom: 20px;
+  line-height: 50px;
 }
 
 .next {
   display: none;
   margin: 0 auto;
+  width: 10%;
+  text-align: center;
   padding: 20px 60px;
   background-color: rgb(23, 21, 21);
   color: rgb(85, 100, 73);
