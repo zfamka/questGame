@@ -61,9 +61,11 @@ startTerminal.addEventListener('click', () => {
 
 skipTerminal.addEventListener('click', () => {
   terminalNoise.volume = 0;
+  terminalSoundSpace.volume = 0;
   terminalSound.forEach(elem => {
     elem.volume = 0;
   })
+  skipTerminal.style.display = 'none';
 })
 
 
