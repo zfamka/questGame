@@ -13,7 +13,7 @@ historySkip.addEventListener('click', () => {
 
   setTimeout(() => {
     gameAudio.play();
-  }, 21000);
+  }, 19000);
   gameAudio.loop = true;
 })
 

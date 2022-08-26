@@ -1,5 +1,3 @@
-const celsi = '&deg';
-
 const terminal = ['Планета Чівапчічі.\n', 'Десь у галактиці Телепісі.\n', 'Час та пора року невідома.\n', 'Пошкоджено генератор основного блоку.\n', 'Спостерігається стрімке зниження кисню у повітрі.\n', 'Помічено перебої зі світлом.\n', 'Температура - 22°\n', 'Кисень - 97%\n', 'Освітленність - 60%'];
 
 const startTerminal = document.querySelector('.preHistory__startTerminal');
@@ -44,12 +42,11 @@ startTerminal.addEventListener('click', () => {
         }
 
         if (terminal[line][count] === ' ') {
+          terminalSoundSpace.currentTime = 0;
           terminalSoundSpace.play();
         } else {
           terminalSound[getRandomArbitrary(terminalSound.length)].play();
         }
-
-
 
         typeLine();
       }, 100);
@@ -59,14 +56,27 @@ startTerminal.addEventListener('click', () => {
   typeText();
 });
 
+let addBlur = 8;
 skipTerminal.addEventListener('click', () => {
+  body.style.filter = 'blur(8px)';
+  (function loop() {
+    setTimeout(() => {
+      body.style.filter = `blur(${addBlur}px)`;
+      addBlur = addBlur - 0.05;
+      if (Math.floor(addBlur) === -1) {
+        body.style.filter = 'blur(0px)';
+        return
+      }
+      loop();
+    }, 100);
+  })();
   terminalNoise.volume = 0;
   terminalSoundSpace.volume = 0;
   terminalSound.forEach(elem => {
     elem.volume = 0;
   })
   skipTerminal.style.display = 'none';
-})
+});
 
 
 

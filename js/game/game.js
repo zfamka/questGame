@@ -33,7 +33,7 @@ function showTextNode(textNodeIndex) {
   const textNode = textNodes.find(elem => elem.id === textNodeIndex);
   const textElem = document.createElement('div');
 
-  addGameImage(textNode.id, 1, image, 'url(../img/main_menu_bg.jpg)');
+  addGameImage(textNode.id, 1, image, 'url(../img/startGameLocation.jpg)');
   addGameImage(textNode.id, 3, image, 'url(../img/scary_face.jfif)');
   addSound(textNode.id, 3);
 
@@ -57,6 +57,8 @@ function showTextNode(textNodeIndex) {
   }
 
   btnSounds(textNode.options);
+
+
 };
 
 function selectOption(option) {
