@@ -16,7 +16,7 @@
   border: 2px solid rgb(193, 243, 182);
   border-radius: 10%;
   height: 65vh;
-  color: rgb(71, 118, 1);
+  color: rgb(98, 161, 2);
 }
 
 .preHistory__startTerminal {
@@ -32,7 +32,7 @@
 .companyName {
   display: none;
   font-family: 'Varino', sans-serif;
-  color: rgb(107, 178, 0);
+  color: rgb(135, 225, 0);
   padding-bottom: 20px;
   animation: choiseOpacity 2s 1;
   transition: linear 0.4s all;
@@ -41,7 +41,9 @@
 .preHistory pre {
   display: none;
   margin-bottom: 20px;
-  line-height: 50px;
+  line-height: 30px;
+  font-size: 16px;
+  font-family: 'Press Start 2P', cursive;
 }
 
 .next {
