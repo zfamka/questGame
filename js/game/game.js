@@ -57,8 +57,6 @@ function showTextNode(textNodeIndex) {
   }
 
   btnSounds(textNode.options);
-
-
 };
 
 function selectOption(option) {
