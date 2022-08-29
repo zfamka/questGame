@@ -1,8 +1,8 @@
 const textElement = document.querySelector('.text');
 const optionButtonsElement = document.querySelector('.buttons');
 const scrim = document.querySelector('.scrim');
-const image = document.querySelector('.image');
 const body = document.querySelector('body');
+const mainC = document.querySelector('.mainContent');
 
 
 const allAudio = document.querySelectorAll('audio')
@@ -13,8 +13,7 @@ allAudio.forEach(elem => {
 
 function addGameImage(gameObj, id, gameImg, url) {
   if (gameObj === id) {
-    gameImg.style.background = url;
-    gameImg.style.backgroundRepeat = 'no-repeat center';
+    gameImg.style.background = url + 'no-repeat center center fixed';
     gameImg.style.backgroundSize = 'cover';
   }
 };
@@ -33,8 +32,8 @@ function showTextNode(textNodeIndex) {
   const textNode = textNodes.find(elem => elem.id === textNodeIndex);
   const textElem = document.createElement('div');
 
-  addGameImage(textNode.id, 1, image, 'url(../img/startGameLocation.jpg)');
-  addGameImage(textNode.id, 3, image, 'url(../img/scary_face.jfif)');
+  addGameImage(textNode.id, 1, mainC, 'url(../img/startGameLocation.jpg)');
+  addGameImage(textNode.id, 3, mainC, 'url(../img/scary_face.jfif)');
   addSound(textNode.id, 3);
 
   if (textNode.id === 3) {

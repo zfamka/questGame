@@ -7,7 +7,7 @@ const next = document.querySelector('.game__changeHover-audio');
 
 historySkip.addEventListener('click', () => {
   preHistory.style.display = 'none';
-  mainContent.style.display = 'block';
+  mainContent.style.display = 'flex';
   next.play();
   startGameTingle.play();
 
