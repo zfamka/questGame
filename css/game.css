@@ -35,25 +35,29 @@ body {
   animation: choiseOpacity 2s 1;
 }
 
+.buttons {
+  width: 500px;
+  border: 2px solid rgb(193, 243, 182);
+  border-radius: 25%;
+  margin: 0 auto;
+  box-shadow: 3px 3px 11px 3px rgb(58, 149, 64);
+  padding: 30px;
+}
+
 .buttons button {
   display: block;
-  margin: 20px auto;
-  border: 0;
+  background-color: inherit;
   padding: 20px;
-  background-color: rgb(23, 21, 21);
+  border: 0;
   color: rgb(85, 100, 73);
-  font-size: 16px;
+  font-size: 22px;
   cursor: pointer;
-  border-radius: 25%;
-  border-color: rgb(205, 242, 185);
-  border: 2px solid rgb(193, 243, 182);
   animation: choiseOpacity 2s 1;
   transition: linear 0.4s all;
 }
 
 .buttons button:hover {
   transform: scale(1.2);
-  box-shadow: 3px 3px 11px 3px rgb(58, 149, 64);
   transition: linear 0.4s all;
   color: rgb(107, 219, 73);
 }

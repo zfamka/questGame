@@ -50,9 +50,11 @@ function showTextNode(textNodeIndex) {
 
   if (textNode.id === 1) {
     optionButtonsElement.style.display = 'none';
+    textElement.style.display = 'none';
     setTimeout(() => {
       optionButtonsElement.style.display = 'block';
-    }, 21000)
+      textElement.style.display = 'block';
+    }, 15000)
   }
 
   btnSounds(textNode.options);
