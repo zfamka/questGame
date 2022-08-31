@@ -3,6 +3,7 @@
 @import url(tapBar.css);
 
 * {
+  box-sizing: border-box;
   padding: 0;
   margin: 0;
 }
@@ -27,6 +28,8 @@ body {
 }
 
 .text {
+  margin: 0 auto;
+  max-width: 800px;
   color: rgb(129, 149, 149);
   padding: 20px 0;
   font-size: 22px;
@@ -36,7 +39,7 @@ body {
 }
 
 .buttons {
-  width: 500px;
+  width: 800px;
   border: 2px solid rgb(193, 243, 182);
   border-radius: 25%;
   margin: 0 auto;
@@ -47,7 +50,7 @@ body {
 .buttons button {
   display: block;
   background-color: inherit;
-  padding: 20px;
+  padding-top: 10px;
   border: 0;
   color: rgb(85, 100, 73);
   font-size: 22px;
