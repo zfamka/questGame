@@ -3,17 +3,24 @@
   src: url(../fonts/VarinonormalRegular-1GXaM.ttf);
 }
 
+body {
+  background-image: url(../img/termBg.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
 .preHistory {
   display: flex;
   flex-direction: column;
   margin: 50px auto;
   color: white;
   font-size: 30px;
-  padding: 20px 40px;
+  padding: 30px 50px;
   animation: choiseOpacity 2s 1;
   transition: linear 0.4s all;
   width: 900px;
   border: 2px solid rgb(193, 243, 182);
+  background-color: #031a03;
   border-radius: 10%;
   height: 65vh;
   color: rgb(98, 161, 2);
@@ -49,10 +56,10 @@
 .next {
   display: none;
   margin: 0 auto;
+  background-color: #031a03;
   width: 20%;
   text-align: center;
   padding: 20px 60px;
-  background-color: rgb(23, 21, 21);
   color: rgb(85, 100, 73);
   font-size: 22px;
   cursor: pointer;

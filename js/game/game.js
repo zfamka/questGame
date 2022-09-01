@@ -32,7 +32,7 @@ function showTextNode(textNodeIndex) {
   const textNode = textNodes.find(elem => elem.id === textNodeIndex);
   const textElem = document.createElement('div');
 
-  addGameImage(textNode.id, 1, mainC, 'url(../img/startGameLocation.jpg)');
+  addGameImage(textNode.id, 1, mainC, 'url(../img/living_room_spaceship.png)');
   addGameImage(textNode.id, 3, mainC, 'url(../img/scary_face.jfif)');
   addSound(textNode.id, 3);
 
