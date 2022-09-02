@@ -3,6 +3,7 @@ const optionButtonsElement = document.querySelector('.buttons');
 const scrim = document.querySelector('.scrim');
 const body = document.querySelector('body');
 const mainC = document.querySelector('.mainContent');
+const eleaPhoto = document.querySelector('.eleaPhoto');
 
 
 const allAudio = document.querySelectorAll('audio')
@@ -33,12 +34,23 @@ function showTextNode(textNodeIndex) {
   const textElem = document.createElement('div');
 
   addGameImage(textNode.id, 1, mainC, 'url(../img/living_room_spaceship.png)');
-  addGameImage(textNode.id, 3, mainC, 'url(../img/scary_face.jfif)');
   addSound(textNode.id, 3);
 
   if (textNode.id === 3) {
-    body.classList.add('scareOpa')
+    body.classList.add('scareOpa');
   }
+
+  //----------------- Elea photo ID 4
+  if (textNode.id === 4) {
+    eleaPhoto.style.display = 'block';
+    setTimeout(() => {
+      eleaPhoto.style.opacity = '0';
+    }, 5000);
+    setTimeout(() => {
+      eleaPhoto.style.display = 'none';
+    }, 6000);
+  };
+  // --------------------------------------
 
   textElem.textContent = textNode.text;
   textElem.classList.add('text');
