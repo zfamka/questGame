@@ -28,11 +28,12 @@ body {
 }
 
 .text {
-  margin: 0 auto;
+  margin: 20px auto;
   max-width: 800px;
   color: rgb(109 253 0);
-  padding: 20px 0;
+  background-color: #354a35;
   font-size: 22px;
+  border-radius: 10px;
   letter-spacing: 4px;
   text-align: center;
   animation: choiseOpacity 2s 1;
@@ -40,6 +41,7 @@ body {
 
 .buttons {
   max-width: 800px;
+  background-color: #354a35;
   border: 2px solid rgb(193, 243, 182);
   border-radius: 10px;
   margin: 0 auto;

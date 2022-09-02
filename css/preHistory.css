@@ -3,12 +3,6 @@
   src: url(../fonts/VarinonormalRegular-1GXaM.ttf);
 }
 
-body {
-  background-image: url(../img/termBg.png);
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-
 .preHistory {
   display: flex;
   flex-direction: column;
