@@ -1,6 +1,6 @@
 .eleaPhoto {
   display: none;
-  width: 200px;
+  width: 300px;
   margin: 200px auto;
   animation: choiseOpacity 2s 1;
   transition: linear 0.4s all;
