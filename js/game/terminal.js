@@ -56,27 +56,7 @@ startTerminal.addEventListener('click', () => {
   typeText();
 });
 
-let addBlur = 8;
-skipTerminal.addEventListener('click', () => {
-  body.style.filter = 'blur(8px)';
-  (function loop() {
-    setTimeout(() => {
-      body.style.filter = `blur(${addBlur}px)`;
-      addBlur = addBlur - 0.05;
-      if (Math.floor(addBlur) === -1) {
-        body.style.filter = 'blur(0px)';
-        return
-      }
-      loop();
-    }, 100);
-  })();
-  terminalNoise.volume = 0;
-  terminalSoundSpace.volume = 0;
-  terminalSound.forEach(elem => {
-    elem.volume = 0;
-  })
-  skipTerminal.style.display = 'none';
-});
+
 
 
 

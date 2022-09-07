@@ -1,58 +1,34 @@
 const textElement = document.querySelector('.text');
 const optionButtonsElement = document.querySelector('.buttons');
-const scrim = document.querySelector('.scrim');
 const body = document.querySelector('body');
 const mainC = document.querySelector('.mainContent');
-const eleaPhoto = document.querySelector('.eleaPhoto');
-
-
-const allAudio = document.querySelectorAll('audio')
-const volume = localStorage.getItem('volume');
-allAudio.forEach(elem => {
-  elem.volume = volume;
-})
-
-function addGameImage(gameObj, id, gameImg, url) {
-  if (gameObj === id) {
-    gameImg.style.background = url + 'no-repeat center center fixed';
-    gameImg.style.backgroundSize = 'cover';
-  }
-};
-
-function addSound(elem, id) {
-  if (elem === id) {
-    scrim.play();
-  }
-};
 
 function startGame() {
   showTextNode(1)
 };
 
+
 function showTextNode(textNodeIndex) {
   const textNode = textNodes.find(elem => elem.id === textNodeIndex);
   const textElem = document.createElement('div');
 
-  addGameImage(textNode.id, 1, mainC, 'url(../img/living_room_spaceship.png)');
-  addSound(textNode.id, 3);
+  // change image -----------------------------------------------------------
+  mainC.style.background = textNode.image + 'no-repeat center center fixed';
+  mainC.style.backgroundSize = 'cover';
+  // ------------------------------------------------------------------------
 
-  if (textNode.id === 3) {
-    body.classList.add('scareOpa');
+  //starter game blur @startGameBlur.js --------
+  if (textNode.id === 1) {
+    startBlur();
   }
+  //----------------------------------------------
 
-  //----------------- Elea photo ID 4
+  //----------------- Elea face memories @eleaFaceMemories.js --------
   if (textNode.id === 4) {
-    eleaPhoto.style.display = 'block';
-    optionButtonsElement.style.opacity = '0';
-    setTimeout(() => {
-      eleaPhoto.style.opacity = '0';
-      optionButtonsElement.style.opacity = '1';
-    }, 5000);
-    setTimeout(() => {
-      eleaPhoto.style.display = 'none';
-    }, 6000);
-  };
-  // --------------------------------------
+    eleaFaceMemories();
+  }
+  // --------------------------------------------------------------------
+
 
   textElem.textContent = textNode.text;
   textElem.classList.add('text');
@@ -62,16 +38,8 @@ function showTextNode(textNodeIndex) {
     optionButtonsElement.removeChild(optionButtonsElement.firstChild);
   }
 
-  if (textNode.id === 1) {
-    optionButtonsElement.style.display = 'none';
-    textElement.style.display = 'none';
-    setTimeout(() => {
-      optionButtonsElement.style.display = 'block';
-      textElement.style.display = 'block';
-    }, 15000)
-  }
 
-  btnSounds(textNode.options);
+  gameBtns(textNode.options);
 };
 
 function selectOption(option) {
@@ -82,7 +50,7 @@ function selectOption(option) {
   showTextNode(nextTextNodeId)
 };
 
-function btnSounds(elem) {
+function gameBtns(elem) {
   elem.forEach(option => {
     const button = document.createElement('button');
     button.textContent = option.text;
@@ -97,12 +65,13 @@ function btnSounds(elem) {
     });
     optionButtonsElement.appendChild(button);
   });
-}
+};
 
 const textNodes = [
   {
     id: 1,
     text: `Ти чув як хтось був поряд з тобою, але ледве ти встиг прокинутись він втік. Цікаво хто це був і що він шукав?`,
+    image: 'url(../img/living_room_spaceship.png)',
     options: [
       {
         text: `Далі`,
@@ -113,6 +82,7 @@ const textNodes = [
   {
     id: 2,
     text: `Здається ти прийшов до тями. "Де я? Хто я? Що зі мною сталось? Як болить голова."`,
+    image: 'url(../img/logo.png)',
     options: [
       {
         text: `Піднятись з ліжка та обшукати кімнату.`,

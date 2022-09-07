@@ -15,6 +15,8 @@ historySkip.addEventListener('click', () => {
     gameAudio.play();
   }, 15000);
   gameAudio.loop = true;
-})
+});
+
+//start main game audio --------
 
 
