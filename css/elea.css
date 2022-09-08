@@ -1,8 +1,49 @@
 .eleaPhoto {
   display: none;
   width: 300px;
-  margin: 200px auto;
+  margin: 40px auto;
   animation: choiseOpacity 2s 1;
-  transition: linear 0.4s all;
+  transition: linear 1s all;
   filter: blur(10px);
 }
+
+.eleaPhotoWardrobe {
+  display: none;
+  position: relative;
+  width: 300px;
+  height: 450px;
+  margin: 0 auto 20px auto;
+  perspective: 1000px;
+  animation: choiseOpacity 2s 1;
+  transition: linear 1s all;
+}
+
+.eleaPhotoWardrobe__photo, .eleaPhotoBackground {
+  width: 100%;
+  height: 100%;
+  transition: 1s;
+  backface-visibility: hidden;
+  animation: choiseOpacity 2s 1;
+  transition: linear 1s all;
+}
+
+.eleaPhotoWardrobe__photo {
+  position: absolute;
+  display: none;
+  width: 300px;
+  margin: 0 auto;
+  filter: blur(0px);
+  border: 15px solid rgb(60 1 66);
+  border-radius: 25px;
+}
+
+.eleaPhotoBackground {
+  display: none;
+  background-color: rgb(187, 158, 190);
+  border: 15px solid rgb(60 1 66);
+  border-radius: 25px;
+  transform: rotateY(180deg);
+}
+
+.eleaPhotoWardrobe:active .eleaPhotoWardrobe__photo {transform: rotateY(180deg);}
+.eleaPhotoWardrobe:active .eleaPhotoBackground {transform: rotateY(360deg);}

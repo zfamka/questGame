@@ -2,6 +2,9 @@ const textElement = document.querySelector('.text');
 const optionButtonsElement = document.querySelector('.buttons');
 const body = document.querySelector('body');
 const mainC = document.querySelector('.mainContent');
+const helpHint = document.querySelector('.help')
+const eleaPhoto = document.querySelector('.eleaPhoto');
+
 
 function startGame() {
   showTextNode(1)
@@ -23,9 +26,33 @@ function showTextNode(textNodeIndex) {
   }
   //----------------------------------------------
 
-  //----------------- Elea face memories @eleaFaceMemories.js --------
+  //----------------- func @vanishingOpacity.js vanish eleaMemories ID 4 --------
   if (textNode.id === 4) {
-    eleaFaceMemories();
+    vanishingOpacity(eleaPhoto, 5000, 6000)
+    optionButtonsElement.style.opacity = '0';
+    optionButtonsElement.style.pointerEvents = 'none';
+    setTimeout(() => {
+      optionButtonsElement.style.opacity = '1';
+      optionButtonsElement.style.pointerEvents = 'all';
+    }, 5000);
+  }
+  // --------------------------------------------------------------------
+
+  //------------------- add elea photo/help hint ID 8 -------------------
+  if (textNode.id === 8) {
+    eleaPhotoWardrobe.style.display = 'block';
+    eleaPhotoWardrobePhoto.style.display = 'block';
+    eleaPhotoWardrobeBackground.style.display = 'block';
+    helpHint.style.display = 'block';
+  }
+  //----------------------------------------------------------------------
+
+  //----------------- func @vanishingOpacity.js vanish elea photo ID 10 --------
+  if (textNode.id === 10) {
+    vanishingOpacity(helpHint, 0, 1000);
+    vanishingOpacity(eleaPhotoWardrobe, 0, 1000);
+    vanishingOpacity(eleaPhotoWardrobePhoto, 0, 1000);
+    vanishingOpacity(eleaPhotoWardrobeBackground, 0, 1000);
   }
   // --------------------------------------------------------------------
 
@@ -74,7 +101,7 @@ const textNodes = [
     image: 'url(../img/living_room_spaceship.png)',
     options: [
       {
-        text: `Далі`,
+        text: `Далі...`,
         nextText: 2,
       },
     ]
@@ -113,11 +140,11 @@ const textNodes = [
         nextText: 11,
       },
       {
-        text: `Підійти до вікна`,
+        text: `Підійти до вікна.`,
         nextText: 6,
       },
       {
-        text: `Обшукати шафу`,
+        text: `Обшукати шафу.`,
         nextText: 7,
       },
     ]
@@ -148,17 +175,18 @@ const textNodes = [
   },
   {
     id: 8,
-    text: `На фото молода дівчина. "Хто це? Я її знаю? питань стає лише більше."`,
+    text: `На фото молода дівчина. "Хто це? Я її знаю? питань стає лише більше. <br>
+    (Дізнатись більше деталей зажміть "ЛКМ" на зображені)"`,
     options: [
       {
-        text: `Повернути фото.`,
+        text: `Далі...`,
         nextText: 9,
       },
     ]
   },
   {
     id: 9,
-    text: `На другій стороні підпис. "Elea".`,
+    text: `На іншій стороні підпис "Elea".`,
     options: [
       {
         text: `Взяти фото.`,
@@ -181,7 +209,7 @@ const textNodes = [
     text: `В тумбі ти знайшов лист з підписом "Кращому тату".`,
     options: [
       {
-        text: `Читати`,
+        text: `Читати...`,
         nextText: 12,
       },
     ]
@@ -191,7 +219,7 @@ const textNodes = [
     text: `Я знаю що в нас все було не як у мрії, але ми родина і ми дуже сумуємо за тобою і віримо що ти повернешся до нас. З любовью Elea.`,
     options: [
       {
-        text: `Взяти`,
+        text: `Взяти.`,
         nextText: 13,
       },
     ]
@@ -201,7 +229,7 @@ const textNodes = [
     text: `"Цей лист мені? Куди я повинен повернутись? Моя донька? Питань стало лише більше."`,
     options: [
       {
-        text: `Піти до шафи`,
+        text: `Піти до шафи.`,
         nextText: 10,
       },
     ]
