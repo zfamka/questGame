@@ -44,6 +44,7 @@ function showTextNode(textNodeIndex) {
     eleaPhotoWardrobePhoto.style.display = 'block';
     eleaPhotoWardrobeBackground.style.display = 'block';
     helpHint.style.display = 'block';
+    helpHint.innerHTML = '(Дізнатись більше деталей зажміть "ЛКМ" на зображені)';
   }
   //----------------------------------------------------------------------
 
@@ -175,8 +176,7 @@ const textNodes = [
   },
   {
     id: 8,
-    text: `На фото молода дівчина. "Хто це? Я її знаю? питань стає лише більше. <br>
-    (Дізнатись більше деталей зажміть "ЛКМ" на зображені)"`,
+    text: `На фото молода дівчина. "Хто це? Я її знаю? питань стає лише більше."`,
     options: [
       {
         text: `Далі...`,
