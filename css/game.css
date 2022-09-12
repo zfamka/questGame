@@ -85,6 +85,19 @@ body {
   color: rgb(107, 219, 73);
 }
 
+.itemsBracer {
+  width: 100px;
+  position: absolute;
+  top: 30px;
+  right: 30px;
+  transition: linear 0.2s all;
+}
+
+.itemsBracer:hover {
+  transform: scale(1.1);
+  transition: linear 0.2s all;
+}
+
 @keyframes choiseOpacity { 
   0% {
     opacity: 0;
