@@ -2,6 +2,7 @@
 @import url(information.css);
 @import url(tapBar.css);
 @import url(elea.css);
+@import url(inventory.css);
 
 * {
   box-sizing: border-box;
