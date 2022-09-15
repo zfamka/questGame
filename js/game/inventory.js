@@ -5,7 +5,7 @@ let inventoryMenuToogle = false;
 itemsBracer.addEventListener('click', () => {
 
   if (inventoryMenuToogle === false) {
-    inventoryMenu.style.left = '0px';
+    inventoryMenu.style.left = '-15px';
     inventoryMenuToogle = true;
   } else {
     inventoryMenu.style.left = '-300px';
