@@ -18,3 +18,9 @@
   height: 125px;
   border: 1px solid rgba(1, 71, 1, 0.412);
 }
+
+.invetory__menu-slotImg {
+  display: none;
+  width: 90%;
+  height: 90%;
+}

@@ -12,7 +12,6 @@ itemsBracer.addEventListener('click', () => {
     inventoryMenuToogle = false;
   }
 
-
   itemsBracer.style.transform = 'scale(1)';
   setTimeout(() => {
     itemsBracer.style.transform = 'scale(1.1)';

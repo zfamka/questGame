@@ -4,6 +4,11 @@ const body = document.querySelector('body');
 const mainC = document.querySelector('.mainContent');
 const helpHint = document.querySelector('.help')
 const eleaPhoto = document.querySelector('.eleaPhoto');
+let vanishId10 = true;
+const allInventorySlots = document.querySelectorAll('.invetory__menu-slotImg');
+
+
+
 
 
 function startGame() {
@@ -38,6 +43,41 @@ function showTextNode(textNodeIndex) {
   }
   // --------------------------------------------------------------------
 
+
+
+  if (textNode.id === 10) {
+    for (let i = 0; i < allInventorySlots.length; i++) {
+      if (allInventorySlots[i].dataset[''] === '0') {
+        allInventorySlots[i].dataset[''] = '1';
+        allInventorySlots[i].style.display = 'block';
+        console.log(allInventorySlots[i])
+        allInventorySlots[i].style.background = 'red';
+        break;
+      }
+    }
+  }
+
+  if (textNode.id === 13) {
+    for (let i = 0; i < allInventorySlots.length; i++) {
+      if (allInventorySlots[i].dataset[''] === '0') {
+        console.log(allInventorySlots[i])
+        allInventorySlots[i].dataset[''] = '1';
+        allInventorySlots[i].style.display = 'block';
+        allInventorySlots[i].style.background = 'blue';
+        break;
+      }
+    }
+  }
+
+
+
+
+
+
+
+
+
+
   //------------------- add elea photo/help hint ID 8 -------------------
   if (textNode.id === 8) {
     eleaPhotoWardrobe.style.display = 'block';
@@ -49,11 +89,13 @@ function showTextNode(textNodeIndex) {
   //----------------------------------------------------------------------
 
   //----------------- func @vanishingOpacity.js vanish elea photo ID 10 --------
-  if (textNode.id === 10) {
+  if (textNode.id === 10 && vanishId10 === true) {
     vanishingOpacity(helpHint, 0, 1000);
     vanishingOpacity(eleaPhotoWardrobe, 0, 1000);
     vanishingOpacity(eleaPhotoWardrobePhoto, 0, 1000);
     vanishingOpacity(eleaPhotoWardrobeBackground, 0, 1000);
+  } else if (textNode.id === 13) {
+    vanishId10 = false;
   }
   // --------------------------------------------------------------------
 
@@ -110,7 +152,6 @@ const textNodes = [
   {
     id: 2,
     text: `Здається ти прийшов до тями. "Де я? Хто я? Що зі мною сталось? Як болить голова."`,
-    image: 'url(../img/logo.png)',
     options: [
       {
         text: `Піднятись з ліжка та обшукати кімнату.`,
@@ -199,8 +240,8 @@ const textNodes = [
     text: `Від твоїх справ тебе відволікає якийсь шум за дверима.`,
     options: [
       {
-        text: `incoming`,
-        nextText: 0,
+        text: `Підійти до дверей`,
+        nextText: 15,
       },
     ]
   },
@@ -230,7 +271,27 @@ const textNodes = [
     options: [
       {
         text: `Піти до шафи.`,
-        nextText: 10,
+        nextText: 14,
+      },
+    ]
+  },
+  {
+    id: 14,
+    text: `Від твоїх справ тебе відволікає якийсь шум за дверима.`,
+    options: [
+      {
+        text: `Підійти до дверей`,
+        nextText: 15,
+      },
+    ]
+  },
+  {
+    id: 15,
+    text: `INCOMING`,
+    options: [
+      {
+        text: `INCOMING`,
+        nextText: 1,
       },
     ]
   },
