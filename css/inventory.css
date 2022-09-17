@@ -21,6 +21,7 @@
 
 .invetory__menu-slotImg {
   display: none;
-  width: 90%;
+  margin: 0 auto;
+  width: 60%;
   height: 90%;
 }
