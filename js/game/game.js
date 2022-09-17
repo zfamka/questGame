@@ -43,40 +43,10 @@ function showTextNode(textNodeIndex) {
   }
   // --------------------------------------------------------------------
 
-
-
-  if (textNode.id === 10) {
-    for (let i = 0; i < allInventorySlots.length; i++) {
-      if (allInventorySlots[i].dataset[''] === '0') {
-        allInventorySlots[i].dataset[''] = '1';
-        allInventorySlots[i].style.display = 'block';
-        console.log(allInventorySlots[i])
-        allInventorySlots[i].style.background = 'red';
-        break;
-      }
-    }
-  }
-
-  if (textNode.id === 13) {
-    for (let i = 0; i < allInventorySlots.length; i++) {
-      if (allInventorySlots[i].dataset[''] === '0') {
-        console.log(allInventorySlots[i])
-        allInventorySlots[i].dataset[''] = '1';
-        allInventorySlots[i].style.display = 'block';
-        allInventorySlots[i].style.background = 'blue';
-        break;
-      }
-    }
-  }
-
-
-
-
-
-
-
-
-
+  // add item in to inventory 
+  addItemInToInventory(textNode.id, 10, allInventorySlots);
+  addItemInToInventory(textNode.id, 13, allInventorySlots);
+  // ---------------------------------------------------
 
   //------------------- add elea photo/help hint ID 8 -------------------
   if (textNode.id === 8) {

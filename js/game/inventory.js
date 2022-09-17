@@ -18,5 +18,18 @@ itemsBracer.addEventListener('click', () => {
   }, 100);
 });
 
+function addItemInToInventory(textNode, id, allSlots) {
+  if (textNode === id) {
+    for (let i = 0; i < allSlots.length; i++) {
+      if (allSlots[i].dataset[''] === '0') {
+        allSlots[i].dataset[''] = '1';
+        allSlots[i].style.display = 'block';
+        console.log(allSlots[i])
+        allSlots[i].style.background = 'red';
+        break;
+      }
+    }
+  }
+};
 
 
