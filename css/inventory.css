@@ -1,3 +1,19 @@
+.itemsBracer {
+  width: 100px;
+  position: absolute;
+  top: 30px;
+  right: 30px;
+  transition: linear 0.2s all;
+  opacity: 0.7;
+  cursor: pointer;
+}
+
+.itemsBracer:hover {
+  transform: scale(1.1);
+  transition: linear 0.2s all;
+  opacity: 1;
+}
+
 .inventory__menu {
   display: flex;
   flex-wrap: wrap;
@@ -14,6 +30,7 @@
 }
 
 .invetory__menu-slot {
+  padding-top: 10px;
   width: 50%;
   height: 125px;
   border: 1px solid rgba(1, 71, 1, 0.412);
@@ -24,4 +41,8 @@
   margin: 0 auto;
   width: 60%;
   height: 90%;
+  border-radius: 25px;
+  border: 2px solid rgb(193, 243, 182);
+  box-shadow: 3px 3px 11px 3px rgb(58, 149, 64);
+  cursor: pointer;
 }

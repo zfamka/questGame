@@ -44,7 +44,7 @@ function showTextNode(textNodeIndex) {
   // --------------------------------------------------------------------
 
   // add item in to inventory 
-  addItemInToInventory(textNode.id, 10, allInventorySlots, '../img/eleaInventory.jpg');
+  addItemInToInventory(textNode.id, 10, allInventorySlots, '../img/eleaInventoryDark.jpg');
   addItemInToInventory(textNode.id, 13, allInventorySlots);
   // ---------------------------------------------------
 
