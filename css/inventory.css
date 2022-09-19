@@ -45,4 +45,11 @@
   border: 2px solid rgb(193, 243, 182);
   box-shadow: 3px 3px 11px 3px rgb(58, 149, 64);
   cursor: pointer;
+  filter: grayscale(100%);
+  transition: linear 0.2s all;
+}
+
+.invetory__menu-slotImg:hover {
+  filter: grayscale(0%);
+  transition: linear 0.2s all;
 }

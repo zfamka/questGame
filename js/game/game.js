@@ -4,7 +4,6 @@ const body = document.querySelector('body');
 const mainC = document.querySelector('.mainContent');
 const helpHint = document.querySelector('.help')
 const eleaPhoto = document.querySelector('.eleaPhoto');
-let vanishId10 = true;
 const allInventorySlots = document.querySelectorAll('.invetory__menu-slotImg');
 
 
@@ -44,8 +43,8 @@ function showTextNode(textNodeIndex) {
   // --------------------------------------------------------------------
 
   // add item in to inventory 
-  addItemInToInventory(textNode.id, 10, allInventorySlots, '../img/eleaInventoryDark.jpg');
-  addItemInToInventory(textNode.id, 13, allInventorySlots);
+  addItemInToInventory(textNode.id, 10, allInventorySlots, '../img/eleaInventory.jpg');
+  addItemInToInventory(textNode.id, 13, allInventorySlots, '../img/itemBracer.png');
   // ---------------------------------------------------
 
   //------------------- add elea photo/help hint ID 8 -------------------
@@ -59,13 +58,11 @@ function showTextNode(textNodeIndex) {
   //----------------------------------------------------------------------
 
   //----------------- func @vanishingOpacity.js vanish elea photo ID 10 --------
-  if (textNode.id === 10 && vanishId10 === true) {
+  if (textNode.id === 10 || textNode.id === 14) {
     vanishingOpacity(helpHint, 0, 1000);
     vanishingOpacity(eleaPhotoWardrobe, 0, 1000);
     vanishingOpacity(eleaPhotoWardrobePhoto, 0, 1000);
     vanishingOpacity(eleaPhotoWardrobeBackground, 0, 1000);
-  } else if (textNode.id === 13) {
-    vanishId10 = false;
   }
   // --------------------------------------------------------------------
 
@@ -241,7 +238,7 @@ const textNodes = [
     options: [
       {
         text: `Піти до шафи.`,
-        nextText: 14,
+        nextText: 7,
       },
     ]
   },
