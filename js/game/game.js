@@ -8,8 +8,6 @@ const allInventorySlots = document.querySelectorAll('.invetory__menu-slotImg');
 
 
 
-
-
 function startGame() {
   showTextNode(1)
 };
