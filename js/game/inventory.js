@@ -2,7 +2,8 @@ const itemsBracer = document.querySelector('.itemsBracer');
 const inventoryMenu = document.querySelector('.inventory__menu');
 
 inventoryMenu.addEventListener('click', (elem) => {
-  console.log(elem);
+  elem.target.style.width = '600px'
+  console.log(elem.target);
 })
 
 let inventoryMenuToogle = false;
