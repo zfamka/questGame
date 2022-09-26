@@ -55,9 +55,24 @@
 }
 
 .inventoryOpenItem {
-  transform: scale(1.5);
-  margin: 0 auto;
-  width: 300px;
-  height: 450px;
-  border: 5px solid greenyellow;
+  display: none;
+  position: absolute;
+  width: 100vh;
+  height: 100vh;
+  right: 0;
+  z-index: 1000;
 }
+
+.inventoryOpenItem img {
+  width: 200px;
+  height: 350px;
+  margin-top: 160px;
+  margin-left: 110px;
+  margin-bottom: 30px;
+}
+
+.inventoryOpenItem p {
+  width: 480px;
+  color: greenyellow;
+}
+

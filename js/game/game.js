@@ -65,6 +65,7 @@ function showTextNode(textNodeIndex) {
   // --------------------------------------------------------------------
 
 
+
   textElem.textContent = textNode.text;
   textElem.classList.add('text');
   textElement.append(textElem);

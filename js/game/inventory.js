@@ -1,9 +1,16 @@
 const itemsBracer = document.querySelector('.itemsBracer');
 const inventoryMenu = document.querySelector('.inventory__menu');
+const inventoryOpenItem = document.querySelector('.inventoryOpenItem');
+const inventoryOpenItemImg = document.querySelector('.inventoryOpenItem img');
+const inventoryOpenItemP = document.querySelector('.inventoryOpenItem p');
+
+
 
 inventoryMenu.addEventListener('click', (elem) => {
-  elem.target.style.width = '600px'
+  // elem.target.style.width = '600px'
   console.log(elem.target);
+
+  inventoryOpenItem.style.display = 'block';
 })
 
 let inventoryMenuToogle = false;
