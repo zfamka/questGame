@@ -3,14 +3,27 @@ const inventoryMenu = document.querySelector('.inventory__menu');
 const inventoryOpenItem = document.querySelector('.inventoryOpenItem');
 const inventoryOpenItemImg = document.querySelector('.inventoryOpenItem img');
 const inventoryOpenItemP = document.querySelector('.inventoryOpenItem p');
-
-
+const inventoryCloseItem = document.querySelector('.inventoryCloseItem');
 
 inventoryMenu.addEventListener('click', (elem) => {
+  const body = document.querySelector('body');
+  const mainC = document.querySelector('.mainContent');
   // elem.target.style.width = '600px'
-  console.log(elem.target);
+  console.log(elem.target.src);
 
-  inventoryOpenItem.style.display = 'block';
+  inventoryOpenItemImg.src = elem.target.src
+  inventoryOpenItem.style.display = 'flex';
+  inventoryOpenItem.style.opacity = '1';
+  mainC.style.filter = 'grayscale(100%)';
+  mainC.style.pointerEvents = 'none';
+  inventoryOpenItem.style.filter = 'graysclae(0%)'
+});
+
+inventoryCloseItem.addEventListener('click', () => {
+  const mainC = document.querySelector('.mainContent');
+  vanishingOpacityWithOutDisplayBlock(inventoryOpenItem, 0, 500);
+  mainC.style.pointerEvents = 'auto';
+  mainC.style.filter = 'grayscale(0%)';
 })
 
 let inventoryMenuToogle = false;

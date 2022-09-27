@@ -46,33 +46,60 @@
   box-shadow: 3px 3px 11px 3px rgb(58, 149, 64);
   cursor: pointer;
   filter: grayscale(100%);
-  transition: linear 0.2s all;
 }
 
 .invetory__menu-slotImg:hover {
   filter: grayscale(0%);
-  transition: linear 0.2s all;
 }
 
 .inventoryOpenItem {
   display: none;
+  flex-direction: column;
+  align-items: center;
   position: absolute;
-  width: 100vh;
+  width: 100%;
   height: 100vh;
   right: 0;
   z-index: 1000;
+  animation: choiseOpacity 2s 1;
+  transition: linear 0.4s all;
 }
 
 .inventoryOpenItem img {
-  width: 200px;
-  height: 350px;
+  width: 100px;
+  height: 150px;
   margin-top: 160px;
-  margin-left: 110px;
+  margin-left: 10px;
   margin-bottom: 30px;
 }
 
 .inventoryOpenItem p {
-  width: 480px;
+  width: 310px;
   color: greenyellow;
+  text-align: center;
 }
 
+.inventoryCloseItem {
+  width: 290px;
+  height: 50px;
+  background-color: #354a35;
+  color: rgb(118 161 84);
+  margin-top: 20px;
+  text-align: center;
+}
+
+.inventoryCloseItem:hover {
+  transform: scale(1.1);
+  color: rgb(107, 219, 73);
+}
+
+
+@keyframes choiseOpacity { 
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}

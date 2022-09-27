@@ -7,3 +7,12 @@ const vanishingOpacity = function (element, opacityNoneTime, displayNoneTime) {
     element.style.display = 'none';
   }, displayNoneTime);
 };
+
+const vanishingOpacityWithOutDisplayBlock = function (element, opacityNoneTime, displayNoneTime) {
+  setTimeout(() => {
+    element.style.opacity = '0';
+  }, opacityNoneTime);
+  setTimeout(() => {
+    element.style.display = 'none';
+  }, displayNoneTime);
+};

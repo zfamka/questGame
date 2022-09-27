@@ -1,4 +1,5 @@
 const startBlur = function () {
+  const body = document.querySelector('body');
   //starter blur --variables @terminal.js ---
   skipTerminal.addEventListener('click', () => {
     let addBlur = 8;

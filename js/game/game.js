@@ -1,17 +1,13 @@
 const textElement = document.querySelector('.text');
 const optionButtonsElement = document.querySelector('.buttons');
-const body = document.querySelector('body');
 const mainC = document.querySelector('.mainContent');
 const helpHint = document.querySelector('.help')
 const eleaPhoto = document.querySelector('.eleaPhoto');
 const allInventorySlots = document.querySelectorAll('.invetory__menu-slotImg');
 
-
-
 function startGame() {
   showTextNode(1)
 };
-
 
 function showTextNode(textNodeIndex) {
   const textNode = textNodes.find(elem => elem.id === textNodeIndex);
