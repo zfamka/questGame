@@ -6,10 +6,9 @@ const inventoryOpenItemP = document.querySelector('.inventoryOpenItem p');
 const inventoryCloseItem = document.querySelector('.inventoryCloseItem');
 
 inventoryMenu.addEventListener('click', (elem) => {
-  const body = document.querySelector('body');
   const mainC = document.querySelector('.mainContent');
   // elem.target.style.width = '600px'
-  console.log(elem.target.src);
+  console.log(elem.target);
 
   inventoryOpenItemImg.src = elem.target.src
   inventoryOpenItem.style.display = 'flex';
@@ -21,7 +20,7 @@ inventoryMenu.addEventListener('click', (elem) => {
 
 inventoryCloseItem.addEventListener('click', () => {
   const mainC = document.querySelector('.mainContent');
-  vanishingOpacityWithOutDisplayBlock(inventoryOpenItem, 0, 500);
+  vanishingOpacityWithDisplayFlex(inventoryOpenItem, 0, 500);
   mainC.style.pointerEvents = 'auto';
   mainC.style.filter = 'grayscale(0%)';
 })

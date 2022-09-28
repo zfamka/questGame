@@ -8,7 +8,7 @@ const vanishingOpacity = function (element, opacityNoneTime, displayNoneTime) {
   }, displayNoneTime);
 };
 
-const vanishingOpacityWithOutDisplayBlock = function (element, opacityNoneTime, displayNoneTime) {
+const vanishingOpacityWithDisplayFlex = function (element, opacityNoneTime, displayNoneTime) {
   setTimeout(() => {
     element.style.opacity = '0';
   }, opacityNoneTime);
