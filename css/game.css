@@ -3,6 +3,7 @@
 @import url(tapBar.css);
 @import url(elea.css);
 @import url(inventory.css);
+@import url(familySheet.css);
 
 * {
   box-sizing: border-box;

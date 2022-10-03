@@ -4,6 +4,7 @@ const mainC = document.querySelector('.mainContent');
 const helpHint = document.querySelector('.help')
 const eleaPhoto = document.querySelector('.eleaPhoto');
 const allInventorySlots = document.querySelectorAll('.invetory__menu-slotImg');
+const familySheet = document.querySelector('.familySheet');
 
 function startGame() {
   showTextNode(1)
@@ -38,7 +39,7 @@ function showTextNode(textNodeIndex) {
 
   // add item in to inventory 
   addItemInToInventory(textNode.id, 10, allInventorySlots, '../img/eleaInventory.jpg');
-  addItemInToInventory(textNode.id, 13, allInventorySlots, '../img/itemBracer.png');
+  addItemInToInventory(textNode.id, 13, allInventorySlots, '../img/familisheetstartgame.png');
   // ---------------------------------------------------
 
   //------------------- add elea photo/help hint ID 8 -------------------
@@ -48,17 +49,25 @@ function showTextNode(textNodeIndex) {
     eleaPhotoWardrobeBackground.style.display = 'block';
     helpHint.style.display = 'block';
     helpHint.innerHTML = '(Дізнатись більше деталей зажміть "ЛКМ" на зображені)';
+  } else if (textNode.id === 10) {
+    //----------------- func @vanishingOpacity.js vanish elea photo ID 10 --------
+    if (textNode.id === 10) {
+      vanishingOpacity(helpHint, 0, 1000);
+      vanishingOpacity(eleaPhotoWardrobe, 0, 1000);
+      // vanishingOpacity(eleaPhotoWardrobePhoto, 0, 1000);
+      // vanishingOpacity(eleaPhotoWardrobeBackground, 0, 1000);
+    }
+    // --------------------------------------------------------------------
   }
   //----------------------------------------------------------------------
 
-  //----------------- func @vanishingOpacity.js vanish elea photo ID 10 --------
-  if (textNode.id === 10 || textNode.id === 14) {
-    vanishingOpacity(helpHint, 0, 1000);
-    vanishingOpacity(eleaPhotoWardrobe, 0, 1000);
-    vanishingOpacity(eleaPhotoWardrobePhoto, 0, 1000);
-    vanishingOpacity(eleaPhotoWardrobeBackground, 0, 1000);
+  //------------------- add sheet for player ID 11 -------------------
+  if (textNode.id === 12) {
+    familySheet.style.display = 'block';
+  } else if (textNode.id === 13) {
+    vanishingOpacity(familySheet, 0, 1000);
   }
-  // --------------------------------------------------------------------
+  //----------------------------------------------------------------------
 
 
 
@@ -189,7 +198,8 @@ const textNodes = [
   },
   {
     id: 9,
-    text: `На іншій стороні підпис "Elea".`,
+    text: `На іншій стороні підпис 
+    @"Еліа".`,
     options: [
       {
         text: `Взяти фото.`,
@@ -209,7 +219,7 @@ const textNodes = [
   },
   {
     id: 11,
-    text: `В тумбі ти знайшов лист з підписом "Кращому тату".`,
+    text: `В тумбі ти знайшов лист з підписом "Для -------".`,
     options: [
       {
         text: `Читати...`,
@@ -219,7 +229,7 @@ const textNodes = [
   },
   {
     id: 12,
-    text: `Я знаю що в нас все було не як у мрії, але ми родина і ми дуже сумуємо за тобою і віримо що ти повернешся до нас. З любовью Elea.`,
+    text: `Я знаю що в нас все було не як у мрії, але ми родина і ми дуже сумуємо за тобою і віримо що ти повернешся до нас. З любовью Еліа.`,
     options: [
       {
         text: `Взяти.`,
@@ -229,7 +239,7 @@ const textNodes = [
   },
   {
     id: 13,
-    text: `"Цей лист мені? Куди я повинен повернутись? Моя донька? Питань стало лише більше."`,
+    text: `"Цей лист мені? Куди я повинен повернутись? Питань стало лише більше."`,
     options: [
       {
         text: `Піти до шафи.`,

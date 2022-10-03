@@ -7,9 +7,6 @@ const inventoryCloseItem = document.querySelector('.inventoryCloseItem');
 
 inventoryMenu.addEventListener('click', (elem) => {
   const mainC = document.querySelector('.mainContent');
-  // elem.target.style.width = '600px'
-  console.log(elem.target);
-  console.log(elem.target.src);
 
   inventoryOpenItemImg.src = elem.target.src
   inventoryOpenItem.style.display = 'flex';
@@ -17,13 +14,6 @@ inventoryMenu.addEventListener('click', (elem) => {
   mainC.style.filter = 'grayscale(100%)';
   mainC.style.pointerEvents = 'none';
   inventoryOpenItem.style.filter = 'graysclae(0%)';
-
-
-  if (elem.target.src === '../img/eleainventory.jpg') {
-    inventoryOpenItemP.innerHTML = 'Elea photo'
-  } else if (elem.target.src === '../img/itemBracer.png') {
-    inventoryOpenItemP.innerHTML = 'mail for dad';
-  }
 });
 
 inventoryCloseItem.addEventListener('click', () => {
