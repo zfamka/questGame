@@ -7,7 +7,8 @@ const startBlur = function () {
     (function loop() {
       setTimeout(() => {
         body.style.filter = `blur(${addBlur}px)`;
-        addBlur = addBlur - 0.05;
+        addBlur = addBlur - 0.50;
+        //0.05
         if (Math.floor(addBlur) === -1) {
           body.style.filter = 'blur(0px)';
           return
@@ -31,8 +32,8 @@ const startBlur = function () {
   setTimeout(() => {
     optionButtonsElement.style.display = 'block';
     textElement.style.display = 'block';
-  }, 15000);
-  //-----------------------------------
+  }, 1.5);
+  //--------15000---------------------------
 };
 
 

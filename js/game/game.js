@@ -69,8 +69,6 @@ function showTextNode(textNodeIndex) {
   }
   //----------------------------------------------------------------------
 
-
-
   textElem.textContent = textNode.text;
   textElem.classList.add('text');
   textElement.append(textElem);
@@ -79,6 +77,11 @@ function showTextNode(textNodeIndex) {
     optionButtonsElement.removeChild(optionButtonsElement.firstChild);
   }
 
+  if (textNode.isHot === true) {
+    textElement.classList.add('hightTempEffectCss');
+    optionButtonsElement.classList.add('hightTempEffectCss');
+    inventoryMenu.classList.add('hightTempEffectCss');
+  }
 
   gameBtns(textNode.options);
 };
@@ -259,11 +262,12 @@ const textNodes = [
   },
   {
     id: 15,
-    text: `INCOMING`,
+    text: `Підійшовши до дверей ти відчув тепло яке йде від них.`,
+    isHot: true,
     options: [
       {
-        text: `INCOMING`,
-        nextText: 1,
+        text: `Відкрити двері.`,
+        nextText: 16,
       },
     ]
   },

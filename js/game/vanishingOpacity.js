@@ -16,3 +16,4 @@ const vanishingOpacityWithDisplayFlex = function (element, opacityNoneTime, disp
     element.style.display = 'none';
   }, displayNoneTime);
 };
+

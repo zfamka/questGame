@@ -122,3 +122,19 @@ body {
     opacity: 0.7;
   }
 }
+
+.hightTempEffectCss {
+  animation: hightTempEffect 2s infinite;
+}
+
+@keyframes hightTempEffect {
+  0% {
+    box-shadow: -2px 0px 42px 0px rgb(225 76 0);
+  }
+  50% {
+    box-shadow: -2px 0px 42px 10px rgb(225 76 0);
+  }
+  100% {
+    box-shadow: -2px 0px 42px 0px rgb(225 76 0);
+  }
+}
