@@ -129,12 +129,44 @@ body {
 
 @keyframes hightTempEffect {
   0% {
-    box-shadow: -2px 0px 42px 0px rgb(225 76 0);
+    box-shadow: -2px 0px 42px 0px rgb(225, 154, 0);
   }
   50% {
-    box-shadow: -2px 0px 42px 10px rgb(225 76 0);
+    box-shadow: -2px 0px 42px 10px rgb(225, 154, 0);
   }
   100% {
-    box-shadow: -2px 0px 42px 0px rgb(225 76 0);
+    box-shadow: -2px 0px 42px 0px rgb(225, 154, 0);
+  }
+}
+
+.veryhightTempEffect {
+  animation: veryhightTempEffect 2s infinite;
+}
+
+@keyframes veryhightTempEffect {
+  0% {
+    box-shadow: -2px 0px 42px 0px rgb(225, 82, 0);
+  }
+  50% {
+    box-shadow: -2px 0px 42px 10px rgb(225, 82, 0);
+  }
+  100% {
+    box-shadow: -2px 0px 42px 0px rgb(225, 82, 0);
+  }
+}
+
+.getAburnTrauma {
+  animation: getAburnTrauma 5s infinite;
+}
+
+@keyframes getAburnTrauma {
+  0% {
+    box-shadow: -2px 0px 42px 0px rgb(225, 0, 0);
+  }
+  50% {
+    box-shadow: -2px 0px 42px 10px rgb(225, 0, 0);
+  }
+  100% {
+    box-shadow: -2px 0px 42px 0px rgb(225, 00, 0);
   }
 }

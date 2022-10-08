@@ -51,17 +51,15 @@ function showTextNode(textNodeIndex) {
     helpHint.innerHTML = '(Дізнатись більше деталей зажміть "ЛКМ" на зображені)';
   } else if (textNode.id === 10) {
     //----------------- func @vanishingOpacity.js vanish elea photo ID 10 --------
-    if (textNode.id === 10) {
-      vanishingOpacity(helpHint, 0, 1000);
-      vanishingOpacity(eleaPhotoWardrobe, 0, 1000);
-      // vanishingOpacity(eleaPhotoWardrobePhoto, 0, 1000);
-      // vanishingOpacity(eleaPhotoWardrobeBackground, 0, 1000);
-    }
-    // --------------------------------------------------------------------
+    vanishingOpacity(helpHint, 0, 1000);
+    vanishingOpacity(eleaPhotoWardrobe, 0, 1000);
+    vanishingOpacity(eleaPhotoWardrobePhoto, 0, 1000);
+    vanishingOpacity(eleaPhotoWardrobeBackground, 0, 1000);
   }
+  // --------------------------------------------------------------------
   //----------------------------------------------------------------------
 
-  //------------------- add sheet for player ID 11 -------------------
+  //------------------- add sheet for player ID 12 -------------------
   if (textNode.id === 12) {
     familySheet.style.display = 'block';
   } else if (textNode.id === 13) {
@@ -77,11 +75,41 @@ function showTextNode(textNodeIndex) {
     optionButtonsElement.removeChild(optionButtonsElement.firstChild);
   }
 
+  // hot temp -------------------------
   if (textNode.isHot === true) {
     textElement.classList.add('hightTempEffectCss');
     optionButtonsElement.classList.add('hightTempEffectCss');
     inventoryMenu.classList.add('hightTempEffectCss');
+  } else if (textNode.isHot === false) {
+    textElement.classList.remove('hightTempEffectCss');
+    optionButtonsElement.classList.remove('hightTempEffectCss');
+    inventoryMenu.classList.remove('hightTempEffectCss');
   }
+  // -----------------------------------
+
+  // very hot temp -------------------------
+  if (textNode.isRlyHot === true) {
+    textElement.classList.add('veryhightTempEffect');
+    optionButtonsElement.classList.add('veryhightTempEffect');
+    inventoryMenu.classList.add('veryhightTempEffect');
+  } else if (textNode.isRlyHot === false) {
+    textElement.classList.remove('veryhightTempEffect');
+    optionButtonsElement.classList.remove('veryhightTempEffect');
+    inventoryMenu.classList.remove('veryhightTempEffect');
+  }
+  // -----------------------------------
+
+  // got a burn trauma -------------------------
+  if (textNode.gotAburnTrauma === true) {
+    textElement.classList.add('getAburnTrauma');
+    optionButtonsElement.classList.add('getAburnTrauma');
+    inventoryMenu.classList.add('getAburnTrauma');
+  } else if (textNode.gotAburnTrauma === false) {
+    textElement.classList.remove('getAburnTrauma');
+    optionButtonsElement.classList.remove('getAburnTrauma');
+    inventoryMenu.classList.remove('getAburnTrauma');
+  }
+  // -----------------------------------
 
   gameBtns(textNode.options);
 };
@@ -181,7 +209,7 @@ const textNodes = [
   },
   {
     id: 7,
-    text: `У шафі так багато речей але твоє око зачепилось за фотографію дівчини.`,
+    text: `У шафі купа мотлоху але твоє око зачепилось за фотографію дівчини.`,
     options: [
       {
         text: `Взяти в руки.`,
@@ -268,6 +296,71 @@ const textNodes = [
       {
         text: `Відкрити двері.`,
         nextText: 16,
+      },
+    ]
+  },
+  {
+    id: 16,
+    text: `В обличча вдарив потужний спалах вогню. "Весь корабель палає!!! Треба шукати вихід." Крізь вогонь ліворуч ти бачиш на стіні висить "Сокира", праворуч відніється вулиця.`,
+    isHot: false,
+    isRlyHot: true,
+    options: [
+      {
+        text: `Побігти до сокири.`,
+        nextText: 19,
+      },
+      {
+        text: `Побігти на вихід.`,
+        nextText: 17,
+      },
+    ]
+  },
+  {
+    id: 17,
+    text: `"Ледве вижив, добре що я почув шум за дверима."`,
+    isHot: true,
+    isRlyHot: false,
+    options: [
+      {
+        text: `Далі...`,
+        nextText: 18,
+      },
+    ]
+  },
+  {
+    id: 18,
+    text: `Ви вибігли на вулицю і в очі вам вдарило різке світло.`,
+    isHot: false,
+    isRlyHot: false,
+    options: [
+      {
+        text: `INC`,
+        nextText: 1,
+      },
+    ]
+  },
+  {
+    id: 19,
+    text: `Ви добігли до сокири вогню становиться все більше і більше.`,
+    isHot: false,
+    isRlyHot: true,
+    options: [
+      {
+        text: `Взяти сокиру та бігти до виходу.`,
+        nextText: 20,
+      },
+    ]
+  },
+  {
+    id: 20,
+    text: `Пробігаючи крізь вогонь ви отримали опік рук але тепер у вас є "Сокира".`,
+    isHot: false,
+    isRlyHot: false,
+    gotAburnTrauma: true,
+    options: [
+      {
+        text: `Далі...`,
+        nextText: 18,
       },
     ]
   },
