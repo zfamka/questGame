@@ -75,41 +75,12 @@ function showTextNode(textNodeIndex) {
     optionButtonsElement.removeChild(optionButtonsElement.firstChild);
   }
 
-  // hot temp -------------------------
-  if (textNode.isHot === true) {
-    textElement.classList.add('hightTempEffectCss');
-    optionButtonsElement.classList.add('hightTempEffectCss');
-    inventoryMenu.classList.add('hightTempEffectCss');
-  } else if (textNode.isHot === false) {
-    textElement.classList.remove('hightTempEffectCss');
-    optionButtonsElement.classList.remove('hightTempEffectCss');
-    inventoryMenu.classList.remove('hightTempEffectCss');
-  }
+  // temp effects -------------
+  temperatureTriger(textNode.isHot, textElement, optionButtonsElement, inventoryMenu, 'hightTempEffectCss');
+  temperatureTriger(textNode.isRlyHot, textElement, optionButtonsElement, inventoryMenu, 'veryhightTempEffect');
+  temperatureTriger(textNode.gotAburnTrauma, textElement, optionButtonsElement, inventoryMenu, 'getAburnTrauma');
   // -----------------------------------
 
-  // very hot temp -------------------------
-  if (textNode.isRlyHot === true) {
-    textElement.classList.add('veryhightTempEffect');
-    optionButtonsElement.classList.add('veryhightTempEffect');
-    inventoryMenu.classList.add('veryhightTempEffect');
-  } else if (textNode.isRlyHot === false) {
-    textElement.classList.remove('veryhightTempEffect');
-    optionButtonsElement.classList.remove('veryhightTempEffect');
-    inventoryMenu.classList.remove('veryhightTempEffect');
-  }
-  // -----------------------------------
-
-  // got a burn trauma -------------------------
-  if (textNode.gotAburnTrauma === true) {
-    textElement.classList.add('getAburnTrauma');
-    optionButtonsElement.classList.add('getAburnTrauma');
-    inventoryMenu.classList.add('getAburnTrauma');
-  } else if (textNode.gotAburnTrauma === false) {
-    textElement.classList.remove('getAburnTrauma');
-    optionButtonsElement.classList.remove('getAburnTrauma');
-    inventoryMenu.classList.remove('getAburnTrauma');
-  }
-  // -----------------------------------
 
   gameBtns(textNode.options);
 };
