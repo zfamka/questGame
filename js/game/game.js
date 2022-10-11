@@ -82,6 +82,10 @@ function showTextNode(textNodeIndex) {
   // -----------------------------------
 
 
+  if (textNode.id === 16) {
+
+  }
+
   gameBtns(textNode.options);
 };
 
@@ -263,6 +267,7 @@ const textNodes = [
     id: 15,
     text: `Підійшовши до дверей ти відчув тепло яке йде від них.`,
     isHot: true,
+    image: 'url(../img/living_room_metal_door.webp)',
     options: [
       {
         text: `Відкрити двері.`,
@@ -275,6 +280,7 @@ const textNodes = [
     text: `В обличча вдарив потужний спалах вогню. "Весь корабель палає!!! Треба шукати вихід." Крізь вогонь ліворуч ти бачиш на стіні висить "Сокира", праворуч відніється вулиця.`,
     isHot: false,
     isRlyHot: true,
+    image: 'url(../img/burn_inside_in_the_spaceship.webp)',
     options: [
       {
         text: `Побігти до сокири.`,
