@@ -5,6 +5,8 @@ const helpHint = document.querySelector('.help')
 const eleaPhoto = document.querySelector('.eleaPhoto');
 const allInventorySlots = document.querySelectorAll('.invetory__menu-slotImg');
 const familySheet = document.querySelector('.familySheet');
+const splashFireAudio = document.querySelector('.splash__fire');
+const shipInFire = document.querySelector('.ship__inFire');
 
 function startGame() {
   showTextNode(1)
@@ -82,9 +84,13 @@ function showTextNode(textNodeIndex) {
   // -----------------------------------
 
 
-  if (textNode.id === 16) {
+  // audio event sound ------------
+  audioEvent(textNode.eventSound);
+  // ----------------------------------------------------------------------------------
 
-  }
+  // long audio event sound ------------
+  longAudioEvent(textNode.id, 16, 18, shipInFire, 1000);
+  // ----------------------------------------------------------------------------------
 
   gameBtns(textNode.options);
 };
@@ -280,7 +286,9 @@ const textNodes = [
     text: `В обличча вдарив потужний спалах вогню. "Весь корабель палає!!! Треба шукати вихід." Крізь вогонь ліворуч ти бачиш на стіні висить "Сокира", праворуч відніється вулиця.`,
     isHot: false,
     isRlyHot: true,
-    image: 'url(../img/burn_inside_in_the_spaceship.webp)',
+    image: 'url(../img/burn_inside_the_spaceship.webp)',
+    eventSound: splashFireAudio,
+    longEventSound: shipInFire,
     options: [
       {
         text: `Побігти до сокири.`,
