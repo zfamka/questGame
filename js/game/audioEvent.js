@@ -9,24 +9,10 @@ function audioEvent(audio) {
   }
 };
 
-// function longAudioEvent(elem, start, audio, loop,) {
-//   if (elem === start) {
-//     audio.play();
-//     audio.loop = loop;
-//   }
-// };
-
-function longAudioEvent(elem, check) {
+function backgroundAudio(elem, check) {
   if (check !== undefined) {
     elem.play();
     elem.loop = 10000;
-  }
-}
-
-function gameSound(elem, start, audio, loop) {
-  if (elem === start) {
-    audio.play();
-    audio.loop = loop;
   }
 }
 

@@ -79,9 +79,9 @@ function showTextNode(textNodeIndex) {
   }
 
   // temp effects -------------
-  temperatureTriger(textNode.isHot, textElement, optionButtonsElement, inventoryMenu, 'hightTempEffectCss');
-  temperatureTriger(textNode.isRlyHot, textElement, optionButtonsElement, inventoryMenu, 'veryhightTempEffect');
-  temperatureTriger(textNode.gotAburnTrauma, textElement, optionButtonsElement, inventoryMenu, 'getAburnTrauma');
+  isHot(textNode.isHot);
+  isRlyHot(textNode.isRlyHot);
+  getAburnTrauma(textNode.gotAburnTrauma);
   // -----------------------------------
 
   // stop all sounds -----------------
@@ -93,7 +93,7 @@ function showTextNode(textNodeIndex) {
   // ----------------------------------------------------------------------------------
 
   // long audio event sound ------------
-  longAudioEvent(textNode.longEventSound, textNode.longEvendSoundCheck);
+  backgroundAudio(textNode.longEventSound, textNode.longEvendSoundCheck);
   // ----------------------------------------------------------------------------------
 
 
@@ -131,6 +131,7 @@ const textNodes = [
     id: 1,
     text: `Ти чув як хтось був поряд з тобою, але ледве ти встиг прокинутись він втік. Цікаво хто це був і що він шукав?`,
     image: 'url(../img/living_room_spaceship.png)',
+    gotAburnTrauma: false,
     options: [
       {
         text: `Далі...`,
