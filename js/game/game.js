@@ -7,6 +7,7 @@ const allInventorySlots = document.querySelectorAll('.invetory__menu-slotImg');
 const familySheet = document.querySelector('.familySheet');
 const splashFireAudio = document.querySelector('.splash__fire');
 const shipInFire = document.querySelector('.ship__inFire');
+const startGameAudio = document.querySelector('.game__audio');
 
 function startGame() {
   showTextNode(1)
@@ -83,14 +84,19 @@ function showTextNode(textNodeIndex) {
   temperatureTriger(textNode.gotAburnTrauma, textElement, optionButtonsElement, inventoryMenu, 'getAburnTrauma');
   // -----------------------------------
 
+  // stop all sounds -----------------
+  stopAllSounds(textNode.stopAllSounds);
+  // ------------------------------------
 
   // audio event sound ------------
   audioEvent(textNode.eventSound);
   // ----------------------------------------------------------------------------------
 
   // long audio event sound ------------
-  longAudioEvent(textNode.id, 16, 18, shipInFire, 1000);
+  longAudioEvent(textNode.longEventSound, textNode.longEvendSoundCheck);
   // ----------------------------------------------------------------------------------
+
+
 
   gameBtns(textNode.options);
 };
@@ -287,7 +293,9 @@ const textNodes = [
     isHot: false,
     isRlyHot: true,
     image: 'url(../img/burn_inside_the_spaceship.webp)',
+    stopAllSounds: true,
     eventSound: splashFireAudio,
+    longEvendSoundCheck: true,
     longEventSound: shipInFire,
     options: [
       {
@@ -317,10 +325,11 @@ const textNodes = [
     text: `Ви вибігли на вулицю і в очі вам вдарило різке світло.`,
     isHot: false,
     isRlyHot: false,
+    stopAllSounds: true,
     options: [
       {
-        text: `INC`,
-        nextText: 1,
+        text: `Далі...`,
+        nextText: 21,
       },
     ]
   },
@@ -342,10 +351,23 @@ const textNodes = [
     isHot: false,
     isRlyHot: false,
     gotAburnTrauma: true,
+    eventSound: splashFireAudio,
     options: [
       {
         text: `Далі...`,
         nextText: 18,
+      },
+    ]
+  },
+  {
+    id: 21,
+    text: `Через декілька хвилин як ващі очі звикли до світла ви зрозуміли що знаходитесь в пустелі.`,
+    longEvendSoundCheck: true,
+    longEventSound: startGameAudio,
+    options: [
+      {
+        text: `Далі...`,
+        nextText: 1,
       },
     ]
   },

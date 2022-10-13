@@ -9,15 +9,32 @@ function audioEvent(audio) {
   }
 };
 
-function longAudioEvent(elem, start, stop, audio, loop) {
-  const allAudio = document.querySelectorAll('audio');
+// function longAudioEvent(elem, start, audio, loop,) {
+//   if (elem === start) {
+//     audio.play();
+//     audio.loop = loop;
+//   }
+// };
+
+function longAudioEvent(elem, check) {
+  if (check !== undefined) {
+    elem.play();
+    elem.loop = 10000;
+  }
+}
+
+function gameSound(elem, start, audio, loop) {
   if (elem === start) {
+    audio.play();
+    audio.loop = loop;
+  }
+}
+
+function stopAllSounds(elem) {
+  const allAudio = document.querySelectorAll('audio');
+  if (elem === true) {
     for (let i = 0; i < allAudio.length; i++) {
       allAudio[i].stop();
     }
-    audio.play();
-    audio.loop = loop;
-  } else if (elem === stop) {
-    audio.stop();
   }
-};
+}
