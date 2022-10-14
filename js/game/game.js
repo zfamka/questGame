@@ -40,10 +40,9 @@ function showTextNode(textNodeIndex) {
   }
   // --------------------------------------------------------------------
 
-  // add item in to inventory 
-  addItemInToInventory(textNode.id, 10, allInventorySlots, '../img/eleaInventory.jpg');
-  addItemInToInventory(textNode.id, 13, allInventorySlots, '../img/familisheetstartgame.png');
-  // ---------------------------------------------------
+  // add item in to inventory ---------------------------------
+  addInventoryItem(textNode.inventoryItem, allInventorySlots);
+  // ----------------------------------------------------------
 
   //------------------- add elea photo/help hint ID 8 -------------------
   if (textNode.id === 8) {
@@ -229,6 +228,7 @@ const textNodes = [
   {
     id: 10,
     text: `Від твоїх справ тебе відволікає якийсь шум за дверима.`,
+    inventoryItem: '../img/eleaInventory.jpg',
     options: [
       {
         text: `Підійти до дверей`,
@@ -259,6 +259,7 @@ const textNodes = [
   {
     id: 13,
     text: `"Цей лист мені? Куди я повинен повернутись? Питань стало лише більше."`,
+    inventoryItem: '../img/familisheetstartgame.png',
     options: [
       {
         text: `Піти до шафи.`,

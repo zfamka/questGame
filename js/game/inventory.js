@@ -40,32 +40,22 @@ itemsBracer.addEventListener('click', () => {
   }, 100);
 });
 
-function addItemInToInventory(textNode, id, allSlots, imgUrl) {
-  try {
-    if (textNode === id) {
-      allSlots.forEach(elem => {
+function addInventoryItem(object, inventory) {
+  if (object !== undefined) {
+    try {
+      inventory.forEach(elem => {
         if (elem.dataset[''] === '0') {
           elem.dataset[''] = '1';
           elem.style.display = 'block';
-          elem.src = imgUrl;
+          elem.src = object;
           throw ('Break');
         }
       });
     }
+    catch {
+    }
   }
-  catch {
-  }
-  // if (textNode === id) {
-  //   for (let i = 0; i < allSlots.length; i++) {
-  //     if (allSlots[i].dataset[''] === '0') {
-  //       allSlots[i].dataset[''] = '1';
-  //       allSlots[i].style.display = 'block';
-  //       allSlots[i].src = imgUrl;
-  //       break;
-  //     }
-  //   }
-  // }
-};
+}
 
 
 
