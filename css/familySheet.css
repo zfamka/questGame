@@ -1,11 +1,11 @@
-.familySheet {
+.previewItem {
   display: none;
   width: 350px;
   margin-bottom: 50px;
   margin: 115px auto;
 }
 
-.familySheet__image {
+.previewItem__image {
   width: 100%;
   opacity: 0.8;
   filter: brightness(0.5);
@@ -13,7 +13,7 @@
   transition: linear 0.4s all;
 }
 
-.familySheet__image:hover {
+.previewItem__image:hover {
   opacity: 1;
   filter: brightness(0.8);
   animation: choiseOpacity 2s 1;

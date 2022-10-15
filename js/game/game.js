@@ -4,7 +4,7 @@ const mainC = document.querySelector('.mainContent');
 const helpHint = document.querySelector('.help')
 const eleaPhoto = document.querySelector('.eleaPhoto');
 const allInventorySlots = document.querySelectorAll('.invetory__menu-slotImg');
-const familySheet = document.querySelector('.familySheet');
+const previewItemImage = document.querySelector('.previewItem__image');
 const splashFireAudio = document.querySelector('.splash__fire');
 const shipInFire = document.querySelector('.ship__inFire');
 const startGameAudio = document.querySelector('.game__audio');
@@ -61,12 +61,8 @@ function showTextNode(textNodeIndex) {
   // --------------------------------------------------------------------
   //----------------------------------------------------------------------
 
-  //------------------- add sheet for player ID 12 -------------------
-  if (textNode.id === 12) {
-    familySheet.style.display = 'block';
-  } else if (textNode.id === 13) {
-    vanishingOpacity(familySheet, 0, 1000);
-  }
+  //------------------- show preview item -------------------
+  showPreviewItem(textNode.previewItem, previewItemImage, textNode.hidePreviewItem);
   //----------------------------------------------------------------------
 
   textElem.textContent = textNode.text;
@@ -249,6 +245,8 @@ const textNodes = [
   {
     id: 12,
     text: `Я знаю що в нас все було не як у мрії, але ми родина і ми дуже сумуємо за тобою і віримо що ти повернешся до нас. З любовью Еліа.`,
+    previewItem: '../img/familisheetstartgame.png',
+    inventoryItem: '../img/familisheetstartgame.png',
     options: [
       {
         text: `Взяти.`,
@@ -259,7 +257,7 @@ const textNodes = [
   {
     id: 13,
     text: `"Цей лист мені? Куди я повинен повернутись? Питань стало лише більше."`,
-    inventoryItem: '../img/familisheetstartgame.png',
+    hidePreviewItem: true,
     options: [
       {
         text: `Піти до шафи.`,
@@ -294,7 +292,7 @@ const textNodes = [
     text: `В обличча вдарив потужний спалах вогню. "Весь корабель палає!!! Треба шукати вихід." Крізь вогонь ліворуч ти бачиш на стіні висить "Сокира", праворуч відніється вулиця.`,
     isHot: false,
     isRlyHot: true,
-    image: 'url(../img/burn_inside_the_spaceship.webp)',
+    image: 'url(../img/burn_inside_the_spaceship.jpg)',
     stopAllSounds: true,
     eventSound: splashFireAudio,
     longEvendSoundCheck: true,

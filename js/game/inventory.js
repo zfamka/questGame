@@ -57,5 +57,14 @@ function addInventoryItem(object, inventory) {
   }
 }
 
+function showPreviewItem(item, place, hide) {
+  if (item !== undefined) {
+    document.querySelector('.previewItem').style.display = 'block';
+    place.style.display = 'block';
+    place.src = item;
+  } else if (hide !== undefined) {
+    vanishingOpacity(place, 0, 1000);
+  }
+}
 
 
