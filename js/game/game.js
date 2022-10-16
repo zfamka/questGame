@@ -61,7 +61,7 @@ function showTextNode(textNodeIndex) {
   // --------------------------------------------------------------------
   //----------------------------------------------------------------------
 
-  //------------------- show preview item -------------------
+  //------------------- show qpreview item -------------------
   showPreviewItem(textNode.previewItem, previewItemImage, textNode.hidePreviewItem);
   //----------------------------------------------------------------------
 
@@ -338,6 +338,7 @@ const textNodes = [
     text: `Ви добігли до сокири вогню становиться все більше і більше.`,
     isHot: false,
     isRlyHot: true,
+    previewItem: '../img/axeId19.png',
     options: [
       {
         text: `Взяти сокиру та бігти до виходу.`,
@@ -352,6 +353,8 @@ const textNodes = [
     isRlyHot: false,
     gotAburnTrauma: true,
     eventSound: splashFireAudio,
+    hidePreviewItem: true,
+    inventoryItem: '../img/axeId19.png',
     options: [
       {
         text: `Далі...`,
