@@ -14,6 +14,7 @@ inventoryMenu.addEventListener('click', (elem) => {
   mainC.style.filter = 'grayscale(100%)';
   mainC.style.pointerEvents = 'none';
   inventoryOpenItem.style.filter = 'graysclae(0%)';
+  console.log(elem.target)
 });
 
 inventoryCloseItem.addEventListener('click', () => {

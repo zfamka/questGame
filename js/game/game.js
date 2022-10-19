@@ -326,6 +326,7 @@ const textNodes = [
     isHot: false,
     isRlyHot: false,
     stopAllSounds: true,
+    image: 'url(../img/desertLocation_1.jpg)',
     options: [
       {
         text: `Далі...`,
@@ -367,6 +368,7 @@ const textNodes = [
     text: `Через декілька хвилин як ващі очі звикли до світла ви зрозуміли що знаходитесь в пустелі.`,
     longEvendSoundCheck: true,
     longEventSound: startGameAudio,
+    image: 'url(../img/desertLocation_1.jpg)',
     options: [
       {
         text: `Далі...`,
