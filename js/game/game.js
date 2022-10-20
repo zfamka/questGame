@@ -61,7 +61,7 @@ function showTextNode(textNodeIndex) {
   // --------------------------------------------------------------------
   //----------------------------------------------------------------------
 
-  //------------------- show qpreview item -------------------
+  //------------------- show preview item -------------------
   showPreviewItem(textNode.previewItem, previewItemImage, textNode.hidePreviewItem);
   //----------------------------------------------------------------------
 
@@ -91,7 +91,14 @@ function showTextNode(textNodeIndex) {
   backgroundAudio(textNode.longEventSound, textNode.longEvendSoundCheck);
   // ----------------------------------------------------------------------------------
 
-
+  if (textNode.id === 18) {
+    mainC.style.filter = 'brightness(250%)';
+  }
+  if (textNode.id === 21) {
+    mainC.style.transition = '7s'
+    mainC.style.filter = 'brightness(100%)';
+    console.log('hell')
+  }
 
   gameBtns(textNode.options);
 };

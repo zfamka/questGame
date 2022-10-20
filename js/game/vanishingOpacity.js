@@ -4,6 +4,9 @@ const vanishingOpacity = function (element, opacityNoneTime, displayNoneTime) {
     element.style.opacity = '0';
   }, opacityNoneTime);
   setTimeout(() => {
+    element.style.opacity = '1';
+  }, 3000);
+  setTimeout(() => {
     element.style.display = 'none';
   }, displayNoneTime);
 };
