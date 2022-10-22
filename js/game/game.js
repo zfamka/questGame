@@ -29,15 +29,7 @@ function showTextNode(textNodeIndex) {
   //----------------------------------------------
 
   //----------------- func @vanishingOpacity.js vanish eleaMemories ID 4 --------
-  if (textNode.id === 4) {
-    vanishingOpacity(eleaPhoto, 5000, 6000)
-    optionButtonsElement.style.opacity = '0';
-    optionButtonsElement.style.pointerEvents = 'none';
-    setTimeout(() => {
-      optionButtonsElement.style.opacity = '1';
-      optionButtonsElement.style.pointerEvents = 'all';
-    }, 5000);
-  }
+  vanishingOpacity(textNode.id, 4, eleaPhoto, 5000, 6000)
   // --------------------------------------------------------------------
 
   // add item in to inventory ---------------------------------
@@ -51,14 +43,13 @@ function showTextNode(textNodeIndex) {
     eleaPhotoWardrobeBackground.style.display = 'block';
     helpHint.style.display = 'block';
     helpHint.innerHTML = '(Дізнатись більше деталей зажміть "ЛКМ" на зображені)';
-  } else if (textNode.id === 10) {
-    //----------------- func @vanishingOpacity.js vanish elea photo ID 10 --------
-    vanishingOpacity(helpHint, 0, 1000);
-    vanishingOpacity(eleaPhotoWardrobe, 0, 1000);
-    vanishingOpacity(eleaPhotoWardrobePhoto, 0, 1000);
-    vanishingOpacity(eleaPhotoWardrobeBackground, 0, 1000);
   }
-  // --------------------------------------------------------------------
+
+  //----------------- func @vanishingOpacity.js vanish elea photo ID 10 --------
+  vanishingOpacity(textNode.id, 10, helpHint, 0, 1000);
+  vanishingOpacity(textNode.id, 10, eleaPhotoWardrobe, 0, 1000);
+  vanishingOpacity(textNode.id, 10, eleaPhotoWardrobePhoto, 0, 1000);
+  vanishingOpacity(textNode.id, 10, eleaPhotoWardrobeBackground, 0, 1000);
   //----------------------------------------------------------------------
 
   //------------------- show preview item -------------------
@@ -97,8 +88,9 @@ function showTextNode(textNodeIndex) {
   if (textNode.id === 21) {
     mainC.style.transition = '7s'
     mainC.style.filter = 'brightness(100%)';
-    console.log('hell')
   }
+
+  freezeOptionBtnChoice(textNode.awaitBtns, optionButtonsElement, 5000);
 
   gameBtns(textNode.options);
 };
@@ -158,6 +150,8 @@ const textNodes = [
   {
     id: 4,
     text: `У твоїй пам'яті виплива якась дівчина, ти бачиш дуже не чітке, обличчя. "Хто це міг бути? Може я зможу це з'ясувати обшукавши місцевість.`,
+    awaitBtns: true,
+    blurItem: true,
     options: [
       {
         text: `Подивитись навколо.`,
@@ -375,6 +369,7 @@ const textNodes = [
     text: `Через декілька хвилин як ващі очі звикли до світла ви зрозуміли що знаходитесь в пустелі.`,
     longEvendSoundCheck: true,
     longEventSound: startGameAudio,
+    awaitBtns: true,
     image: 'url(../img/desertLocation_1.jpg)',
     options: [
       {
