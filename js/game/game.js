@@ -8,6 +8,7 @@ const previewItemImage = document.querySelector('.previewItem__image');
 const splashFireAudio = document.querySelector('.splash__fire');
 const shipInFire = document.querySelector('.ship__inFire');
 const startGameAudio = document.querySelector('.game__audio');
+const splashFire = document.querySelector('.fire')
 
 function startGame() {
   showTextNode(1)
@@ -88,6 +89,17 @@ function showTextNode(textNodeIndex) {
   if (textNode.id === 21) {
     mainC.style.transition = '7s'
     mainC.style.filter = 'brightness(100%)';
+  }
+
+  if (textNode.id === 16) {
+    splashFire.style.display = 'block';
+    splashFire.style.animation = '200ms linear splashfire'
+    document.querySelector('.fire img').style.animation = '200ms linear rotate'
+  }
+
+  if (textNode.id === 18) {
+    splashFire.style.display = 'none';
+    document.querySelector('.fire img').style.display = 'none';
   }
 
   freezeOptionBtnChoice(textNode.awaitBtns, optionButtonsElement, 5000);

@@ -19,7 +19,7 @@ inventoryMenu.addEventListener('click', (elem) => {
 
 inventoryCloseItem.addEventListener('click', () => {
   const mainC = document.querySelector('.mainContent');
-  vanishingOpacityWithDisplayFlex(inventoryOpenItem, 0, 500);
+  vanishingOpacityWithDisplayFlex(1, 1, inventoryOpenItem, 0, 500);
   mainC.style.pointerEvents = 'auto';
   mainC.style.filter = 'grayscale(0%)';
 })
@@ -63,8 +63,9 @@ function showPreviewItem(item, place, hide) {
     document.querySelector('.previewItem').style.display = 'block';
     place.style.display = 'block';
     place.src = item;
-  } else if (hide !== undefined) {
-    vanishingOpacity(place, 0, 1000);
+  } else if (hide === true) {
+    vanishingOpacity(1, 1, place, 0, 1000);
+    console.log('hello')
   }
 }
 
