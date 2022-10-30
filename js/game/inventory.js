@@ -64,6 +64,7 @@ function showPreviewItem(item, place, hide) {
     place.style.display = 'block';
     place.src = item;
   } else if (hide === true) {
+    document.querySelector('.previewItem').style.display = 'none';
     vanishingOpacity(1, 1, place, 0, 1000);
     console.log('hello')
   }
