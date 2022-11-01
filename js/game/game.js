@@ -89,6 +89,9 @@ function showTextNode(textNodeIndex) {
   if (textNode.id === 21) {
     mainC.style.transition = '7s'
     mainC.style.filter = 'brightness(100%)';
+    setTimeout(() => {
+      mainC.style.transition = '0.4s'
+    }, 7000);
   }
 
   if (textNode.id === 16) {
@@ -99,10 +102,9 @@ function showTextNode(textNodeIndex) {
 
   if (textNode.id === 18) {
     splashFire.style.display = 'none';
-    document.querySelector('.fire img').style.display = 'none';
   }
 
-  freezeOptionBtnChoice(textNode.awaitBtns, optionButtonsElement, 5000);
+  freezeOptionBtnChoice(textNode.awaitBtns, optionButtonsElement, 2000);
 
   gameBtns(textNode.options);
 };
@@ -216,6 +218,7 @@ const textNodes = [
   {
     id: 8,
     text: `На фото молода дівчина. "Хто це? Я її знаю? питань стає лише більше."`,
+    awaitBtns: true,
     options: [
       {
         text: `Далі...`,
@@ -260,6 +263,7 @@ const textNodes = [
     text: `Я знаю що в нас все було не як у мрії, але ми родина і ми дуже сумуємо за тобою і віримо що ти повернешся до нас. З любовью Еліа.`,
     previewItem: '../img/familisheetstartgame.png',
     inventoryItem: '../img/familisheetstartgame.png',
+    awaitBtns: true,
     options: [
       {
         text: `Взяти.`,
@@ -353,6 +357,7 @@ const textNodes = [
     isHot: false,
     isRlyHot: true,
     previewItem: '../img/axeId19.png',
+    awaitBtns: true,
     options: [
       {
         text: `Взяти сокиру та бігти до виходу.`,

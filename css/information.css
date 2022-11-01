@@ -1,5 +1,21 @@
 .aboutUs {
   display: none;
+  padding-top: 100px;
+}
+
+.aboutUs__container {
+  margin: 100px auto;
+  color: rgb(198, 78, 22);
+  text-align: center;
+}
+
+.aboutUs__container a {
+  color: rgb(167, 21, 21);
+  font-size: 50px;
+}
+
+.aboutUs__container p {
+  padding-top: 15px;
 }
 
 .settings {
@@ -37,7 +53,9 @@
 }
 
 .backToMenu {
+  text-align: center;
   font-size: 34px;
+  display: block;
   color: rgb(198, 78, 22);
   text-decoration: none;
   opacity: 0.5;
@@ -46,6 +64,8 @@
   padding: 10px;
   border: 2px solid rgb(100, 6, 47);
   border-radius: 20px;
+  margin: 0 auto;
+  width: 300px;
 }
 
 .backToMenu:hover {
