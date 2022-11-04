@@ -33,13 +33,17 @@
   </div>
   <div class="settings">
     <div class="setting__volume">
-      <label for="volume">ГУЧНІСТЬ</label>
+      <label for="volume">ГУЧНІСТЬ </label>
       <input class="settings__range" type="range" id="volume" name="volume" min="0" max="1" step="0.1">
     </div>
-    <select name="" id="">
-      <option value="Ukrainian">Українська</option>
-      <option value="English">Англійська</option>
-    </select>
+
+    <div class="setting__language">
+      <p>МОВА</p>
+      <select name="" id="">
+        <option value="Ukrainian">Українська</option>
+        <option value="English">Англійська</option>
+      </select>
+    </div>
     <a class="backToMenu setting__backToMenu" href="#">ПОВЕРНУТИСЬ</a>
     <audio class="setting__audioBackToMenu" src="sounds/backToMenuBtn.mp3"></audio>
     <source src="sounds/backToMenuBtn.mp3" type="audio/ogg">

@@ -8,7 +8,7 @@ const previewItemImage = document.querySelector('.previewItem__image');
 const splashFireAudio = document.querySelector('.splash__fire');
 const shipInFire = document.querySelector('.ship__inFire');
 const startGameAudio = document.querySelector('.game__audio');
-const splashFire = document.querySelector('.fire')
+const splashFire = document.querySelector('.activeEvent')
 
 function startGame() {
   showTextNode(1)
@@ -94,15 +94,30 @@ function showTextNode(textNodeIndex) {
     }, 7000);
   }
 
-  if (textNode.id === 16) {
-    splashFire.style.display = 'block';
-    splashFire.style.animation = '200ms linear splashfire'
-    document.querySelector('.fire img').style.animation = '200ms linear rotate'
+
+  function eventAnimation(textNode, animationTime, blockAnimation, imgAnimation, srcImage) {
+    if (textNode === true) {
+      splashFire.style.display = 'block';
+      splashFire.style.animation = `${animationTime} linear ${blockAnimation}`;
+      document.querySelector('.activeEvent__img').src = `${srcImage}`
+      document.querySelector('.activeEvent__img').style.animation = `${animationTime} linear ${imgAnimation}`;
+      setTimeout(() => {
+        splashFire.style.display = 'none';
+      }, 400);
+    }
   }
 
-  if (textNode.id === 18) {
-    splashFire.style.display = 'none';
-  }
+  eventAnimation(textNode.activeEvent, '200ms', 'splashfire', 'rotate', '../img/fireball.png');
+
+  // if (textNode.id === 16) {
+  //   splashFire.style.display = 'block';
+  //   splashFire.style.animation = '200ms linear splashfire'
+  //   document.querySelector('.fire img').style.animation = '200ms linear rotate'
+  // }
+
+  // if (textNode.id === 18) {
+  //   splashFire.style.display = 'none';
+  // }
 
   freezeOptionBtnChoice(textNode.awaitBtns, optionButtonsElement, 2000);
 
@@ -314,6 +329,7 @@ const textNodes = [
     eventSound: splashFireAudio,
     longEvendSoundCheck: true,
     longEventSound: shipInFire,
+    activeEvent: true,
     options: [
       {
         text: `Побігти до сокири.`,
@@ -374,6 +390,7 @@ const textNodes = [
     eventSound: splashFireAudio,
     hidePreviewItem: true,
     inventoryItem: '../img/axeId19.png',
+    activeEvent: true,
     options: [
       {
         text: `Далі...`,

@@ -2,9 +2,20 @@
   display: none;
 }
 
+.setting__language {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 220px;
+}
+
+.setting__language p {
+  color: rgb(198, 78, 22);
+}
+
 .settings__range {
   -webkit-appearance: none;
-  width: 100%;
+  width: 55%;
   background: inherit;
 }
 .settings__range:focus {

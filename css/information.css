@@ -10,7 +10,7 @@
 }
 
 .aboutUs__container a {
-  color: rgb(167, 21, 21);
+  color: rgb(0 255 149);
   font-size: 50px;
 }
 
@@ -30,7 +30,8 @@
 }
 
 .settings select {
-  width: 200px;
+  border-radius: 5px;
+  width: 55%;
   margin: 50px 0;
   color: rgb(198, 78, 22);
   background-color: rgb(40, 14, 25);
@@ -49,7 +50,7 @@
 .setting__volume {
   display: flex;
   justify-content: space-between;
-  width: 200px;
+  width: 220px;
 }
 
 .backToMenu {
