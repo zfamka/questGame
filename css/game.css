@@ -174,6 +174,7 @@ body {
 
 
 .activeEvent {
+  background: #ff4700;
   display: none;
   border-radius: 100%;
   background-position: center;
@@ -191,7 +192,7 @@ body {
   width: 100%;
 }
 
-@keyframes splashfire {
+@keyframes fireball {
   0% {
     width: 25px;
     height: 25px;
@@ -215,6 +216,16 @@ body {
     width: 100%;
     height: 100%;
     top: 50%;
+  }
+}
+
+@keyframes splashfire {
+  0% {
+    width: 25px;
+    height: 25px;
+  } 
+  100% {
+    transform: scale(50);
   }
 }
 

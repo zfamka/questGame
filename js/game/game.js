@@ -94,30 +94,7 @@ function showTextNode(textNodeIndex) {
     }, 7000);
   }
 
-
-  function eventAnimation(textNode, animationTime, blockAnimation, imgAnimation, srcImage) {
-    if (textNode === true) {
-      splashFire.style.display = 'block';
-      splashFire.style.animation = `${animationTime} linear ${blockAnimation}`;
-      document.querySelector('.activeEvent__img').src = `${srcImage}`
-      document.querySelector('.activeEvent__img').style.animation = `${animationTime} linear ${imgAnimation}`;
-      setTimeout(() => {
-        splashFire.style.display = 'none';
-      }, 400);
-    }
-  }
-
-  eventAnimation(textNode.activeEvent, '200ms', 'splashfire', 'rotate', '../img/fireball.png');
-
-  // if (textNode.id === 16) {
-  //   splashFire.style.display = 'block';
-  //   splashFire.style.animation = '200ms linear splashfire'
-  //   document.querySelector('.fire img').style.animation = '200ms linear rotate'
-  // }
-
-  // if (textNode.id === 18) {
-  //   splashFire.style.display = 'none';
-  // }
+  eventAnimation(textNode.activeEventFire, '200ms', 'splashfire', 'rotate', '../img/fireball.png');
 
   freezeOptionBtnChoice(textNode.awaitBtns, optionButtonsElement, 2000);
 
@@ -329,7 +306,7 @@ const textNodes = [
     eventSound: splashFireAudio,
     longEvendSoundCheck: true,
     longEventSound: shipInFire,
-    activeEvent: true,
+    activeEventFire: true,
     options: [
       {
         text: `Побігти до сокири.`,
@@ -390,7 +367,7 @@ const textNodes = [
     eventSound: splashFireAudio,
     hidePreviewItem: true,
     inventoryItem: '../img/axeId19.png',
-    activeEvent: true,
+    activeEventFire: true,
     options: [
       {
         text: `Далі...`,
