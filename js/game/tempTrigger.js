@@ -1,8 +1,7 @@
-const text = document.querySelector('.text');
-const btns = document.querySelector('.buttons');
-const inventory = document.querySelector('.inventory__menu');
-
 function isHot(elem) {
+  const text = document.querySelector('.text');
+  const btns = document.querySelector('.buttons');
+  const inventory = document.querySelector('.inventory__menu');
   if (elem === true) {
     text.classList.add('hightTempEffectCss');
     btns.classList.add('hightTempEffectCss');
@@ -15,6 +14,9 @@ function isHot(elem) {
 }
 
 function isRlyHot(elem) {
+  const text = document.querySelector('.text');
+  const btns = document.querySelector('.buttons');
+  const inventory = document.querySelector('.inventory__menu');
   if (elem === true) {
     text.classList.add('veryhightTempEffect');
     btns.classList.add('veryhightTempEffect');
@@ -27,6 +29,9 @@ function isRlyHot(elem) {
 }
 
 function getAburnTrauma(elem) {
+  const text = document.querySelector('.text');
+  const btns = document.querySelector('.buttons');
+  const inventory = document.querySelector('.inventory__menu');
   if (elem === true) {
     text.classList.add('getAburnTrauma');
     btns.classList.add('getAburnTrauma');

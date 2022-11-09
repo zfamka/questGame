@@ -98,7 +98,9 @@ function showTextNode(textNodeIndex) {
 
   freezeOptionBtnChoice(textNode.awaitBtns, optionButtonsElement, 2000);
 
+  // setTimeout(() => {
   gameBtns(textNode.options);
+  // }, 500);
 };
 
 function selectOption(option) {

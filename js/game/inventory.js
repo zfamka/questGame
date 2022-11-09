@@ -1,45 +1,53 @@
-const itemsBracer = document.querySelector('.itemsBracer');
-const inventoryMenu = document.querySelector('.inventory__menu');
-const inventoryOpenItem = document.querySelector('.inventoryOpenItem');
-const inventoryOpenItemImg = document.querySelector('.inventoryOpenItem img');
-const inventoryOpenItemP = document.querySelector('.inventoryOpenItem p');
-const inventoryCloseItem = document.querySelector('.inventoryCloseItem');
+(function () {
+  const itemsBracer = document.querySelector('.itemsBracer');
+  const inventoryMenu = document.querySelector('.inventory__menu');
+  const inventoryOpenItem = document.querySelector('.inventoryOpenItem');
+  const inventoryOpenItemImg = document.querySelector('.inventoryOpenItem img');
+  const inventoryOpenItemText = document.querySelector('.invertoryOpenItem__info');
+  const inventoryCloseItem = document.querySelector('.inventoryCloseItem');
 
-inventoryMenu.addEventListener('click', (elem) => {
-  const mainC = document.querySelector('.mainContent');
+  inventoryMenu.addEventListener('click', (elem) => {
+    const mainC = document.querySelector('.mainContent');
 
-  inventoryOpenItemImg.src = elem.target.src
-  inventoryOpenItem.style.display = 'flex';
-  inventoryOpenItem.style.opacity = '1';
-  mainC.style.filter = 'grayscale(100%)';
-  mainC.style.pointerEvents = 'none';
-  inventoryOpenItem.style.filter = 'graysclae(0%)';
-  console.log(elem.target)
-});
+    inventoryCloseItem.style.opacity = '0';
+    inventoryCloseItem.style.pointerEvents = 'none';
 
-inventoryCloseItem.addEventListener('click', () => {
-  const mainC = document.querySelector('.mainContent');
-  vanishingOpacityWithDisplayFlex(1, 1, inventoryOpenItem, 0, 500);
-  mainC.style.pointerEvents = 'auto';
-  mainC.style.filter = 'grayscale(0%)';
-})
+    setTimeout(() => {
+      inventoryCloseItem.style.opacity = '1';
+      inventoryCloseItem.style.pointerEvents = 'auto';
+      inventoryCloseItem.style.transition = '1s';
+    }, 2000)
 
-let inventoryMenuToogle = false;
-itemsBracer.addEventListener('click', () => {
+    inventoryOpenItemImg.src = elem.target.src
+    inventoryOpenItem.style.display = 'flex';
+    inventoryOpenItem.style.opacity = '1';
+    mainC.style.filter = 'grayscale(100%)';
+    inventoryOpenItem.style.filter = 'graysclae(0%)';
+  });
 
-  if (inventoryMenuToogle === false) {
-    inventoryMenu.style.left = '-15px';
-    inventoryMenuToogle = true;
-  } else {
-    inventoryMenu.style.left = '-300px';
-    inventoryMenuToogle = false;
-  }
+  inventoryCloseItem.addEventListener('click', () => {
+    const mainC = document.querySelector('.mainContent');
+    vanishingOpacityWithDisplayFlex(1, 1, inventoryOpenItem, 0, 500);
+    mainC.style.filter = 'grayscale(0%)';
+  })
 
-  itemsBracer.style.transform = 'scale(1)';
-  setTimeout(() => {
-    itemsBracer.style.transform = 'scale(1.1)';
-  }, 100);
-});
+  let inventoryMenuToogle = false;
+  itemsBracer.addEventListener('click', () => {
+
+    if (inventoryMenuToogle === false) {
+      inventoryMenu.style.left = '-15px';
+      inventoryMenuToogle = true;
+    } else {
+      inventoryMenu.style.left = '-300px';
+      inventoryMenuToogle = false;
+    }
+
+    itemsBracer.style.transform = 'scale(1)';
+    setTimeout(() => {
+      itemsBracer.style.transform = 'scale(1.1)';
+    }, 100);
+  });
+}())
 
 function addInventoryItem(object, inventory) {
   if (object !== undefined) {
@@ -60,11 +68,13 @@ function addInventoryItem(object, inventory) {
 
 function showPreviewItem(item, place, hide) {
   if (item !== undefined) {
-    document.querySelector('.previewItem').style.display = 'block';
+    document.querySelector('.previewItem').style.display = 'flex';
     place.style.display = 'block';
     place.src = item;
   } else if (hide === true) {
-    document.querySelector('.previewItem').style.display = 'none';
+    setTimeout(() => {
+      document.querySelector('.previewItem').style.display = 'none';
+    }, 1000)
     vanishingOpacity(1, 1, place, 0, 1000);
     console.log('hello')
   }

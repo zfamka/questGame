@@ -14,8 +14,6 @@ audio.forEach(elem => {
 
 prepareChoise.forEach(elem => {
   elem.addEventListener('click', () => {
-
-
     prepare.style.display = 'none';
     document.querySelector('.logo').style.display = 'block';
     document.querySelector('.btn__inner').style.display = 'flex';
@@ -31,6 +29,7 @@ function mouseJoke(elem, secondElem) {
       elem.textContent = 'No';
     }
   });
+
   elem.addEventListener('mouseover', () => {
     if (elem.textContent === 'No') {
       elem.textContent = 'Yes';

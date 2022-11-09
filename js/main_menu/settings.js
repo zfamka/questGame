@@ -4,7 +4,6 @@ const menu = document.querySelector('.container');
 const volumeRange = document.getElementById('volume');
 const allAudio = document.querySelectorAll('audio');
 
-
 volumeRange.oninput = () => {
   localStorage.setItem('volume', volumeRange.value);
   allAudio.forEach(elem => {
