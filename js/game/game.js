@@ -80,7 +80,7 @@ function showTextNode(textNodeIndex) {
   // ----------------------------------------------------------------------------------
 
   // long audio event sound ------------
-  backgroundAudio(textNode.longEventSound, textNode.longEvendSoundCheck);
+  backgroundAudio(textNode.longEventSound);
   // ----------------------------------------------------------------------------------
 
   if (textNode.id === 18) {
@@ -306,7 +306,6 @@ const textNodes = [
     image: 'url(../img/burn_inside_the_spaceship.jpg)',
     stopAllSounds: true,
     eventSound: splashFireAudio,
-    longEvendSoundCheck: true,
     longEventSound: shipInFire,
     activeEventFire: true,
     options: [
@@ -380,7 +379,6 @@ const textNodes = [
   {
     id: 21,
     text: `Через декілька хвилин як ващі очі звикли до світла ви зрозуміли що знаходитесь в пустелі.`,
-    longEvendSoundCheck: true,
     longEventSound: startGameAudio,
     awaitBtns: true,
     image: 'url(../img/desertLocation_1.jpg)',

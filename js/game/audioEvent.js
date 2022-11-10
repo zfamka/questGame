@@ -9,8 +9,8 @@ function audioEvent(audio) {
   }
 };
 
-function backgroundAudio(elem, check) {
-  if (check !== undefined) {
+function backgroundAudio(elem) {
+  if (elem !== undefined) {
     elem.play();
     elem.loop = 10000;
   }

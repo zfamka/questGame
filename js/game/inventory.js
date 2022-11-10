@@ -76,7 +76,6 @@ function showPreviewItem(item, place, hide) {
       document.querySelector('.previewItem').style.display = 'none';
     }, 1000)
     vanishingOpacity(1, 1, place, 0, 1000);
-    console.log('hello')
   }
 }
 
