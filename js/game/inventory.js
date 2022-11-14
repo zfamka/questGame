@@ -23,6 +23,15 @@
     inventoryOpenItem.style.opacity = '1';
     mainC.style.filter = 'grayscale(100%)';
     inventoryOpenItem.style.filter = 'graysclae(0%)';
+
+    if (elem.target.classList.contains('eleaInventory') == true) {
+      inventoryOpenItemText.innerHTML = 'Еліа?'
+    }
+
+    if (elem.target.classList.contains('familisheetstartgame') == true) {
+      inventoryOpenItemText.innerHTML = 'Я знаю що в нас все було не як у мрії, але ми родина і ми дуже сумуємо за тобою і віримо що ти повернешся до нас. З любовью Еліа.?'
+    }
+
   });
 
   inventoryCloseItem.addEventListener('click', () => {
@@ -57,8 +66,18 @@ function addInventoryItem(object, inventory) {
           elem.dataset[''] = '1';
           elem.style.display = 'block';
           elem.src = object;
+
+          if (object == '../img/eleaInventory.jpg') {
+            elem.classList.add('eleaInventory');
+          }
+
+          if (object == '../img/familisheetstartgame.png') {
+            elem.classList.add('familisheetstartgame');
+          }
+
           throw ('Break');
         }
+
       });
     }
     catch {
