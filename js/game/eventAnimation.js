@@ -13,6 +13,6 @@ function eventAnimation(textNode, animationTime, blockAnimation, imgAnimation, s
 
     setTimeout(() => {
       splashFire.style.display = 'none';
-    }, animationTime);
+    }, animationTime + animationTime);
   }
 }

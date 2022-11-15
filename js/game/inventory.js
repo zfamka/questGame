@@ -32,6 +32,10 @@
       inventoryOpenItemText.innerHTML = 'Я знаю що в нас все було не як у мрії, але ми родина і ми дуже сумуємо за тобою і віримо що ти повернешся до нас. З любовью Еліа.?'
     }
 
+    if (elem.target.classList.contains('axeId19') == true) {
+      inventoryOpenItemText.innerHTML = 'Це сокира, а що ти очікував побачити?'
+    }
+
   });
 
   inventoryCloseItem.addEventListener('click', () => {
@@ -73,6 +77,10 @@ function addInventoryItem(object, inventory) {
 
           if (object == '../img/familisheetstartgame.png') {
             elem.classList.add('familisheetstartgame');
+          }
+
+          if (object == '../img/axeId19.png') {
+            elem.classList.add('axeId19');
           }
 
           throw ('Break');
