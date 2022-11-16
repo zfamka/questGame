@@ -101,6 +101,7 @@ function showTextNode(textNodeIndex) {
   // setTimeout(() => {
   gameBtns(textNode.options);
   // }, 500);
+
 };
 
 function selectOption(option) {

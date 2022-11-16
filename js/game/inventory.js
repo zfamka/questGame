@@ -1,5 +1,5 @@
 (function () {
-  const itemsBracer = document.querySelector('.itemsBracer');
+  const itemsBracer = document.querySelector('.navPanel__item');
   const inventoryMenu = document.querySelector('.inventory__menu');
   const inventoryOpenItem = document.querySelector('.inventoryOpenItem');
   const inventoryOpenItemImg = document.querySelector('.inventoryOpenItem img');
@@ -33,7 +33,7 @@
     }
 
     if (elem.target.classList.contains('axeId19') == true) {
-      inventoryOpenItemText.innerHTML = 'Це сокира, а що ти очікував побачити?'
+      inventoryOpenItemText.innerHTML = 'Сокира, а ти що хотів побачити?'
     }
 
   });
@@ -51,7 +51,7 @@
       inventoryMenu.style.left = '-15px';
       inventoryMenuToogle = true;
     } else {
-      inventoryMenu.style.left = '-300px';
+      inventoryMenu.style.left = '-260px';
       inventoryMenuToogle = false;
     }
 
@@ -105,5 +105,3 @@ function showPreviewItem(item, place, hide) {
     vanishingOpacity(1, 1, place, 0, 1000);
   }
 }
-
-
