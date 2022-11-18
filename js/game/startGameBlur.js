@@ -1,5 +1,6 @@
 const startBlur = function () {
   const body = document.querySelector('body');
+  const invPanel = document.querySelector('.navPanel ')
   //starter blur --variables @terminal.js ---
   skipTerminal.addEventListener('click', () => {
     let addBlur = 8;
@@ -7,8 +8,8 @@ const startBlur = function () {
     (function loop() {
       setTimeout(() => {
         body.style.filter = `blur(${addBlur}px)`;
-        addBlur = addBlur - 0.50;
-        //0.05
+        addBlur = addBlur - 0.05;
+        //0.05 for fast 0.50
         if (Math.floor(addBlur) === -1) {
           body.style.filter = 'blur(0px)';
           return
@@ -27,12 +28,16 @@ const startBlur = function () {
   //----------------------------------------------
 
   //timeout for first choise
-  optionButtonsElement.style.display = 'none';
+  optionButtonsElement.style.opacity = '0';
   textElement.style.display = 'none';
+  invPanel.style.opacity = '0';
+  invPanel.style.transition = 'opacity 1s'
+
   setTimeout(() => {
-    optionButtonsElement.style.display = 'block';
+    optionButtonsElement.style.opacity = '1';
     textElement.style.display = 'block';
-  }, 1.5);
+    invPanel.style.opacity = '1';
+  }, 15000);
   //--------15000---------------------------
 };
 
