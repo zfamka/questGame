@@ -38,7 +38,7 @@ const startBlur = function () {
     textElement.style.display = 'block';
     invPanel.style.opacity = '1';
   }, 15000);
-  //--------15000---------------------------
+  //--------15000 for fast 1.5---------------------------
 };
 
 
