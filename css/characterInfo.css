@@ -31,20 +31,27 @@
 .characterInfo__bar--hp {
   width: 260px;
   height: 30px;
-  border: 2px solid red;
+  border: 2px solid #ff3535;
+  background-color: #c30000;
   margin-bottom: 10px;
+  letter-spacing: 5px;
+  line-height: 28px;
+  font-size: 26px;
+  text-align: center;
 }
 
-.characterInfo__bar--temp {
+.characterInfo__bar--anotherStats {
+  display: flex;
+  align-items: center;
   width: 260px;
   height: 30px;
-  border: 2px solid orange;
 }
 
 .characterInfo__effects {
   display: flex;
   justify-content: space-evenly;
-  border: 2px solid rgb(193, 243, 182);
+  border-top: 2px solid rgb(193, 243, 182);
+  border-bottom: 2px solid rgb(193,243,182);
   box-shadow: 3px 3px 11px 3px rgb(58 149 64);
   margin-top: 30px;
 }
@@ -52,4 +59,25 @@
 .characterInfo__effects--positive {
   border-right: 2px solid rgb(193, 243, 182);
   padding-right: 30px;
+}
+
+.characterInfo__bar--stat {
+  color: rgb(207, 191, 191);
+  margin-right: 10px;
+  border: 2px solid rgb(193,243,182);
+  box-shadow: 3px 3px 11px 3px rgb(58 149 64);
+  padding: 3px;
+}
+
+.characterInfo__bar--temp {
+  color: rgb(116, 182, 239);
+  margin-left: 10px;
+}
+.characterInfo__bar--wet {
+  color: rgb(61, 76, 235);
+  margin-left: 10px;
+}
+.characterInfo__bar--stamina {
+  color: rgb(109 253 0);
+  margin-left: 5px;
 }
