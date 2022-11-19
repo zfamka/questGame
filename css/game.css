@@ -4,6 +4,7 @@
 @import url(elea.css);
 @import url(inventory.css);
 @import url(familySheet.css);
+@import url(characterInfo.css);
 
 * {
   box-sizing: border-box;

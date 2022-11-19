@@ -8,7 +8,7 @@ const startBlur = function () {
     (function loop() {
       setTimeout(() => {
         body.style.filter = `blur(${addBlur}px)`;
-        addBlur = addBlur - 0.05;
+        addBlur = addBlur - 0.50;
         //0.05 for fast 0.50
         if (Math.floor(addBlur) === -1) {
           body.style.filter = 'blur(0px)';
@@ -37,7 +37,7 @@ const startBlur = function () {
     optionButtonsElement.style.opacity = '1';
     textElement.style.display = 'block';
     invPanel.style.opacity = '1';
-  }, 15000);
+  }, 1.5);
   //--------15000 for fast 1.5---------------------------
 };
 
