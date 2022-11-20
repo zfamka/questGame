@@ -1,5 +1,6 @@
 .characterInfo {
   display: none;
+  opacity: 0;
   flex-direction: column;
   position: absolute;
   top: 11%;
@@ -12,6 +13,8 @@
   border: 2px solid rgb(193, 243, 182);
   border-radius: 10px;
   box-shadow: 3px 3px 11px 3px rgb(58 149 64);
+  transition: 1s linear all;
+  animation: choiseOpacity 2s 1;
 }
 
 .characterInfo__info {
@@ -32,12 +35,28 @@
   width: 260px;
   height: 30px;
   border: 2px solid #ff3535;
-  background-color: #c30000;
   margin-bottom: 10px;
   letter-spacing: 5px;
   line-height: 28px;
   font-size: 26px;
   text-align: center;
+  position: relative;
+
+}
+
+.characterInfo__bar--hp::after {
+  content: '100%';
+  position: absolute;
+  width: 12px;
+  height: 12px; 
+  top: 0;
+  right: 58%;
+}
+
+.characterInfo__bar--activeHP {
+  width: 256px;
+  height: 26px;
+  background-color: #c30000;
 }
 
 .characterInfo__bar--anotherStats {
@@ -58,10 +77,11 @@
 
 .characterInfo__effects--positive {
   border-right: 2px solid rgb(193, 243, 182);
-  padding-right: 30px;
+  padding-right: 26px;
 }
 
 .characterInfo__bar--stat {
+  cursor: pointer;
   color: rgb(207, 191, 191);
   margin-right: 10px;
   border: 2px solid rgb(193,243,182);
@@ -80,4 +100,49 @@
 .characterInfo__bar--stamina {
   color: rgb(109 253 0);
   margin-left: 5px;
+}
+
+.characterInfo__state {
+  border-bottom: 2px solid rgb(193, 243, 182);
+  width: 100%;
+  height: 25%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.characterInfo__state--positive {
+  border-right: 2px solid rgb(193, 243, 182);
+}
+
+.characterInfo__state--positive, .characterInfo__state--negative {
+  display: flex;
+  justify-content: flex-start;
+  list-style: none;
+  width: 50%;
+  padding: 10px;
+}
+
+.characterInfo__state--positive span, .characterInfo__state--negative span {
+  cursor: pointer;
+  margin-right: 10px;
+}
+
+.characterInfo__close {
+  width: 100%;
+  text-align: center;
+}
+
+.characterInfo__close a {
+  line-height: 48px;
+  font-size: 25px;
+  text-decoration: none;
+  color: inherit;
+  opacity: 0.5;
+  transition: 400ms linear all;
+  animation: choiseOpacity 1s 1;
+}
+
+.characterInfo__close a:hover {
+  opacity: 1;
+  transition: 400ms linear all;
 }
