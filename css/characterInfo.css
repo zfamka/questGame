@@ -3,8 +3,9 @@
   opacity: 0;
   flex-direction: column;
   position: absolute;
-  top: 11%;
-  left: 35%;
+  right: 0;
+  top: 25%;
+  margin-right: 15px;
   width: 400px;
   height: 350px;
   z-index: 1000;
@@ -35,7 +36,8 @@
   width: 260px;
   height: 30px;
   border: 2px solid #ff3535;
-  margin-bottom: 10px;
+  border-radius: 13px;
+  margin-bottom: 20px;
   letter-spacing: 5px;
   line-height: 28px;
   font-size: 26px;
@@ -57,6 +59,7 @@
   width: 256px;
   height: 26px;
   background-color: #c30000;
+  border-radius: 10px;
 }
 
 .characterInfo__bar--anotherStats {
@@ -91,6 +94,7 @@
   height: 35px;
   display: flex;
   align-items: center;
+  border-radius: 10px;
 }
 .characterInfo__bar--stat:last-child {
   margin-right: 0;
