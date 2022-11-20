@@ -62,6 +62,7 @@
 .characterInfo__bar--anotherStats {
   display: flex;
   align-items: center;
+  justify-content: space-between;
   width: 260px;
   height: 30px;
 }
@@ -87,11 +88,16 @@
   border: 2px solid rgb(193,243,182);
   box-shadow: 3px 3px 11px 3px rgb(58 149 64);
   padding: 3px;
+  height: 35px;
+  display: flex;
+  align-items: center;
+}
+.characterInfo__bar--stat:last-child {
+  margin-right: 0;
 }
 
 .characterInfo__bar--temp {
   color: rgb(116, 182, 239);
-  margin-left: 10px;
 }
 .characterInfo__bar--wet {
   color: rgb(61, 76, 235);
