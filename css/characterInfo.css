@@ -81,10 +81,11 @@
 
 .characterInfo__effects--positive {
   border-right: 2px solid rgb(193, 243, 182);
-  padding-right: 26px;
+  padding-right: 25px;
 }
 
 .characterInfo__bar--stat {
+  width: 100%;
   cursor: pointer;
   color: rgb(207, 191, 191);
   margin-right: 10px;
@@ -95,9 +96,15 @@
   display: flex;
   align-items: center;
   border-radius: 10px;
+  transition: 200ms linear all;
 }
 .characterInfo__bar--stat:last-child {
   margin-right: 0;
+}
+
+.characterInfo__bar--stat:hover {
+  border: 2px solid rgb(4, 82, 170);
+  box-shadow: 3px 3px 11px 3px rgb(42, 119, 220);
 }
 
 .characterInfo__bar--temp {
@@ -149,10 +156,23 @@
   color: inherit;
   opacity: 0.5;
   transition: 400ms linear all;
-  animation: choiseOpacity 1s 1;
 }
 
 .characterInfo__close a:hover {
   opacity: 1;
   transition: 400ms linear all;
+}
+
+.statHint {
+  width: 140px;
+  height: 50px;
+  background-color: #354a35;
+  opacity: 0.8;
+  position: absolute;
+  top: 125px;
+  right: 165px;
+  border-radius: 10px;
+  border: 2px solid rgb(4, 82, 170);
+  box-shadow: 3px 3px 11px 3px rgb(42, 119, 220);
+  text-align: center;
 }

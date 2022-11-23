@@ -1,6 +1,10 @@
 const startBlur = function () {
   const body = document.querySelector('body');
-  const invPanel = document.querySelector('.navPanel ')
+  const invPanel = document.querySelector('.navPanel ');
+  const skipTerminal = document.querySelector('.next');
+  const terminalNoise = document.querySelector('.terminal__noise');
+  const terminalSound = document.querySelectorAll('.terminal__sound');
+  const terminalSoundSpace = document.querySelector('.terminal__soundSpace');
   //starter blur --variables @terminal.js ---
   skipTerminal.addEventListener('click', () => {
     let addBlur = 8;

@@ -1,14 +1,14 @@
 const terminal = ['Планета: невідома.\n', 'Галактика: невідома.\n', 'Час та пора року: невідома.\n', 'Пошкоджено генератор основного блоку.\n', 'Спостерігається стрімке зниження кисню у повітрі.\n', 'Помічено перебої зі світлом.\n', 'Температура - 42°\n', 'Кисень - 42%\n', 'Освітленність - 50%'];
 
-const startTerminal = document.querySelector('.preHistory__startTerminal');
-const terminalText = document.querySelector('.preHistory__terminal');
-const skipTerminal = document.querySelector('.next');
-const terminalSound = document.querySelectorAll('.terminal__sound');
-const terminalSoundSpace = document.querySelector('.terminal__soundSpace');
-const companyName = document.querySelector('.companyName');
-const terminalNoise = document.querySelector('.terminal__noise')
+document.querySelector('.preHistory__startTerminal').addEventListener('click', () => {
+  const startTerminal = document.querySelector('.preHistory__startTerminal');
+  const terminalText = document.querySelector('.preHistory__terminal');
+  const skipTerminal = document.querySelector('.next');
+  const terminalSound = document.querySelectorAll('.terminal__sound');
+  const terminalSoundSpace = document.querySelector('.terminal__soundSpace');
+  const companyName = document.querySelector('.companyName');
+  const terminalNoise = document.querySelector('.terminal__noise');
 
-startTerminal.addEventListener('click', () => {
   terminalNoise.play();
   startTerminal.style.display = 'none';
   companyName.style.display = 'block';
