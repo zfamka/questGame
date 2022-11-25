@@ -98,16 +98,15 @@
   align-items: center;
   justify-content: space-evenly;
   border-radius: 10px;
-  transition: 200ms linear all;
 }
 .characterInfo__bar--stat:last-child {
   margin-right: 0;
 }
 
-.characterInfo__bar--stat:hover {
+/* .characterInfo__bar--stat:hover {
   border: 2px solid rgb(4, 82, 170);
   box-shadow: 3px 3px 11px 3px rgb(42, 119, 220);
-}
+} */
 
 .characterInfo__bar--temp {
   color: rgb(116, 182, 239);

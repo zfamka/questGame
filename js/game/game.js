@@ -83,8 +83,10 @@ function showTextNode(textNodeIndex) {
   backgroundAudio(textNode.longEventSound);
   // ----------------------------------------
   
-  // temp regulate -------------
+  // stat regulate -------------
   tempRegulate(textNode.temp);
+  wetRegulate(textNode.wet);
+  staminaRegulate(textNode.stamina);
   // ------------------------------
 
   if (textNode.id === 18) {
@@ -141,6 +143,8 @@ const textNodes = [
     image: 'url(../img/living_room_spaceship.png)',
     gotAburnTrauma: false,
     temp: 20,
+    wet: 0,
+    stamina: 100,
     options: [
       {
         text: `Далі...`,
@@ -375,7 +379,6 @@ const textNodes = [
     id: 20,
     text: `Пробігаючи крізь вогонь ви отримали опік рук але тепер у вас є "Сокира".`,
     isHot: false,
-    isRlyHot: false,
     gotAburnTrauma: true,
     eventSound: splashFireAudio,
     hidePreviewItem: true,

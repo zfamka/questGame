@@ -37,20 +37,11 @@ function isRlyHot(elem) {
 }
 
 function getAburnTrauma(elem) {
-  const text = document.querySelector('.text');
-  const btns = document.querySelector('.buttons');
-  const inventory = document.querySelector('.inventory__menu');
   const avatar = document.querySelector('.navPanel__item-avatar');
 
   if (elem === true) {
-    text.classList.add('getAburnTrauma');
-    btns.classList.add('getAburnTrauma');
-    inventory.classList.add('getAburnTrauma');
     avatar.classList.add('getAburnTrauma');
   } else if (elem === false) {
-    text.classList.remove('getAburnTrauma');
-    btns.classList.remove('getAburnTrauma');
-    inventory.classList.remove('getAburnTrauma');
     avatar.classList.remove('getAburnTrauma');
   }
 }
