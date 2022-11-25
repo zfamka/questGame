@@ -77,11 +77,15 @@ function showTextNode(textNodeIndex) {
 
   // audio event sound ------------
   audioEvent(textNode.eventSound);
-  // ----------------------------------------------------------------------------------
+  // ----------------------------------------
 
   // long audio event sound ------------
   backgroundAudio(textNode.longEventSound);
-  // ----------------------------------------------------------------------------------
+  // ----------------------------------------
+  
+  // temp regulate -------------
+  tempRegulate(textNode.temp);
+  // ------------------------------
 
   if (textNode.id === 18) {
     mainC.style.filter = 'brightness(250%)';
@@ -101,6 +105,7 @@ function showTextNode(textNodeIndex) {
   // setTimeout(() => {
   gameBtns(textNode.options);
   // }, 500);
+
 
 };
 
@@ -135,6 +140,7 @@ const textNodes = [
     text: `Ти чув як хтось був поряд з тобою, але ледве ти встиг прокинутись він втік. Цікаво хто це був і що він шукав?`,
     image: 'url(../img/living_room_spaceship.png)',
     gotAburnTrauma: false,
+    temp: 20,
     options: [
       {
         text: `Далі...`,
@@ -291,6 +297,7 @@ const textNodes = [
     id: 15,
     text: `Підійшовши до дверей ти відчув тепло яке йде від них.`,
     isHot: true,
+    temp: 35,
     image: 'url(../img/living_room_metal_door.webp)',
     options: [
       {
@@ -304,6 +311,7 @@ const textNodes = [
     text: `В обличча вдарив потужний спалах вогню. "Весь корабель палає!!! Треба шукати вихід." Крізь вогонь ліворуч ти бачиш на стіні висить "Сокира", праворуч відніється вулиця.`,
     isHot: false,
     isRlyHot: true,
+    temp: 50,
     image: 'url(../img/burn_inside_the_spaceship.jpg)',
     stopAllSounds: true,
     eventSound: splashFireAudio,
@@ -325,6 +333,7 @@ const textNodes = [
     text: `"Ледве вижив, добре що я почув шум за дверима."`,
     isHot: true,
     isRlyHot: false,
+    temp: 35,
     options: [
       {
         text: `Далі...`,
@@ -337,6 +346,7 @@ const textNodes = [
     text: `Ви вибігли на вулицю і в очі вам вдарило різке світло.`,
     isHot: false,
     isRlyHot: false,
+    temp: 30,
     stopAllSounds: true,
     image: 'url(../img/desertLocation_1.jpg)',
     options: [
@@ -351,6 +361,7 @@ const textNodes = [
     text: `Ви добігли до сокири вогню становиться все більше і більше.`,
     isHot: false,
     isRlyHot: true,
+    temp: 50,
     previewItem: '../img/axeId19.png',
     awaitBtns: true,
     options: [
