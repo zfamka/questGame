@@ -21,9 +21,10 @@
 }
 
 .preHistory__startTerminal {
-  width: 100px;
-  margin: 50px 0 0 50px;
+  margin: 230px auto;
   cursor: pointer;
+  font-size: 55px;
+  letter-spacing: 10px;
 }
 
 .preHistory__startTerminal:hover {
