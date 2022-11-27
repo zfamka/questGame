@@ -29,7 +29,6 @@ function wetRegulate(elem) {
 function staminaRegulate(elem) {
       if(elem !== undefined) {
         document.querySelector('.characterInfo__bar--staminaCount').innerHTML = elem;
-        console.log(elem)
         if(elem == 100) {
           document.querySelector('.characterInfo__bar--stamina').style.color = 'rgb(109 253 0)';
         } else if (elem <= 70 && elem > 50) {

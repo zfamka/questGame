@@ -105,3 +105,18 @@ function showPreviewItem(item, place, hide) {
     vanishingOpacity(1, 1, place, 0, 1000);
   }
 }
+
+document.querySelector('.navPanel__item-bracer').addEventListener('click', () => {
+  const inventory = document.querySelector('.navPanel__item-bracer');
+  const invOpen = document.querySelector('.inventory__open');
+  const invClose = document.querySelector('.inventory__close');
+  if(inventory.dataset[''] === '0') {
+    inventory.dataset[''] = '1';
+    invClose.stop();
+    invOpen.play();
+  } else if (inventory.dataset[''] === '1') {
+    inventory.dataset[''] = '0';
+    invOpen.stop();
+    invClose.play();
+  }
+})
