@@ -1,18 +1,21 @@
 document.querySelector('.characterInfo__temp').addEventListener('mouseover', () => {
-  changeStatColor('temp')
+  changeStatColor('temp');
 })
 
 document.querySelector('.characterInfo__wet').addEventListener('mouseover', () => {
-  changeStatColor('wet', '75px')
+  changeStatColor('wet', '75px');
 })
 
 document.querySelector('.characterInfo__stamina').addEventListener('mouseover', () => {
-  changeStatColor('stamina', '-15px')
+  changeStatColor('stamina', '-15px');
 })
 
 function changeStatColor(color, position = null) {
   const statBlock = document.querySelector(`.characterInfo__${color}`);
   const statChanger = document.querySelector(`.characterInfo__bar--${color}`);
+  const audio = document.querySelector('.inventory__open');
+  // audio.play();
+  // audio.loop = 1;
 
   const newDiv = document.createElement("div");
   newDiv.classList.add('statHint');
@@ -26,6 +29,7 @@ function changeStatColor(color, position = null) {
   statBlock.appendChild(newDiv)
 
   statBlock.addEventListener('mouseout', () => {
+    audio.stop();
     statBlock.style.borderColor = 'rgb(193,243,182)';
     statBlock.style.boxShadow = '3px 3px 11px 3px rgb(58 149 64)';
     newDiv.remove();

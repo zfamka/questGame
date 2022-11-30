@@ -15,6 +15,8 @@ document.querySelector('.navPanel__item-avatar').addEventListener('click', () =>
     document.querySelector('.characterInfo__close').style.pointerEvents = 'auto';
     document.querySelector('.characterInfo__close').style.transition = '1s';
   }, 3000)
+
+  document.querySelector('.inventory__open').play();
 })
 
 document.querySelector('.characterInfo__close a').addEventListener('click', () => {
@@ -23,9 +25,10 @@ document.querySelector('.characterInfo__close a').addEventListener('click', () =
   setTimeout(() => {
     mainC.style.pointerEvents = 'auto';
   }, 1000);
-
+  
   if (characterInfo.style.display === 'block') {
     vanishingOpacity(1, 1, characterInfo, 0, 1000)
   }
   mainC.style.filter = 'grayscale(0%)';
+  document.querySelector('.inventory__close').play();
 })

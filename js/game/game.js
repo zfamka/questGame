@@ -7,7 +7,7 @@ const allInventorySlots = document.querySelectorAll('.invetory__menu-slotImg');
 const previewItemImage = document.querySelector('.previewItem__image');
 const splashFireAudio = document.querySelector('.splash__fire');
 const shipInFire = document.querySelector('.ship__inFire');
-const startGameAudio = document.querySelector('.game__audio');
+const backgroundGameAudio = document.querySelector('.game__audio');
 const splashFire = document.querySelector('.activeEvent')
 
 function startGame() {
@@ -107,7 +107,6 @@ function showTextNode(textNodeIndex) {
   // setTimeout(() => {
   gameBtns(textNode.options);
   // }, 500);
-
 
 };
 
@@ -394,7 +393,7 @@ const textNodes = [
   {
     id: 21,
     text: `Через декілька хвилин як ващі очі звикли до світла ви зрозуміли що знаходитесь в пустелі.`,
-    longEventSound: startGameAudio,
+    longEventSound: backgroundGameAudio,
     awaitBtns: true,
     image: 'url(../img/desertLocation_1.jpg)',
     options: [
