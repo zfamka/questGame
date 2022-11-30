@@ -10,28 +10,27 @@ document.querySelector('.characterInfo__stamina').addEventListener('mouseover', 
   changeStatColor('stamina', '-15px');
 })
 
-function changeStatColor(color, position = null) {
+function changeStatColor(color) {
   const statBlock = document.querySelector(`.characterInfo__${color}`);
   const statChanger = document.querySelector(`.characterInfo__bar--${color}`);
   const audio = document.querySelector('.inventory__open');
-  // audio.play();
-  // audio.loop = 1;
 
+  audio.play();
+  
   const newDiv = document.createElement("div");
   newDiv.classList.add('statHint');
   newDiv.style.borderColor = statChanger.style.color;
   newDiv.style.boxShadow = '3px 3px 11px 3px ' + statChanger.style.color;
   newDiv.innerHTML = 'some hint for players';
-  newDiv.style.right = `${position}`;
-
+  
   statBlock.style.borderColor = statChanger.style.color;
   statBlock.style.boxShadow = '3px 3px 11px 3px ' + statChanger.style.color;
   statBlock.appendChild(newDiv)
-
+  
   statBlock.addEventListener('mouseout', () => {
-    audio.stop();
     statBlock.style.borderColor = 'rgb(193,243,182)';
     statBlock.style.boxShadow = '3px 3px 11px 3px rgb(58 149 64)';
     newDiv.remove();
+    audio.stop();
   })
 }
