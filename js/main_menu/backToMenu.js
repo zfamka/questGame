@@ -7,5 +7,6 @@ backToMenu.forEach(elem => {
     aboutUs.style.display = 'none';
     menu.style.display = 'flex';
     audioBackToMenu.play();
+    // audioBackToMenu.volume = '0.5';
   })
 })

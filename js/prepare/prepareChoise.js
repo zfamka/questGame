@@ -18,6 +18,7 @@ prepareChoise.forEach(elem => {
     document.querySelector('.logo').style.display = 'block';
     document.querySelector('.btn__inner').style.display = 'flex';
     mainMenuOst.play();
+    // mainMenuOst.volume = '0.5';
     mainMenuOst.loop = true;
   });
 });
