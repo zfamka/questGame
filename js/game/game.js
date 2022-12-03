@@ -11,7 +11,7 @@ const backgroundGameAudio = document.querySelector('.game__audio');
 const splashFire = document.querySelector('.activeEvent')
 
 function startGame() {
-  showTextNode(1)
+  showTextNode(15)
 };
 
 function showTextNode(textNodeIndex) {
