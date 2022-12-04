@@ -15,6 +15,6 @@ document.querySelector('.next').addEventListener('click', () => {
   gameAudio.loop = true;
 });
 
-//start main game audio --------
+//start main game audio ------
 
 
