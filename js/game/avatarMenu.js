@@ -1,16 +1,26 @@
 document.querySelector('.characterInfo__temp').addEventListener('mouseover', () => {
-  changeStatColor('temp');
+  function temp() {
+    const elem = document.querySelector('.characterInfo__bar--tempCount');
+    if(elem.innerHTML > 20 && elem.innerHTML <= 40) {
+      return 'you are good';
+    } else if(elem.innerHTML <= 20) {
+      return 'a bit cold but you are old and gold';
+    } else if (elem.innerHTML >= 50) {
+      return 'speka';
+    }
+  }
+  changeStatColor('temp', temp());
 })
 
 document.querySelector('.characterInfo__wet').addEventListener('mouseover', () => {
-  changeStatColor('wet', '75px');
+  changeStatColor('wet', 'wet');
 })
 
 document.querySelector('.characterInfo__stamina').addEventListener('mouseover', () => {
-  changeStatColor('stamina', '-15px');
+  changeStatColor('stamina', 'stamina');
 })
 
-function changeStatColor(color) {
+function changeStatColor(color, hintText) {
   const statBlock = document.querySelector(`.characterInfo__${color}`);
   const statChanger = document.querySelector(`.characterInfo__bar--${color}`);
   const audio = document.querySelector('.inventory__open');
@@ -21,7 +31,7 @@ function changeStatColor(color) {
   newDiv.classList.add('statHint');
   newDiv.style.borderColor = statChanger.style.color;
   newDiv.style.boxShadow = '3px 3px 11px 3px ' + statChanger.style.color;
-  newDiv.innerHTML = 'some hint for players';
+  newDiv.innerHTML = hintText;
   
   statBlock.style.borderColor = statChanger.style.color;
   statBlock.style.boxShadow = '3px 3px 11px 3px ' + statChanger.style.color;
