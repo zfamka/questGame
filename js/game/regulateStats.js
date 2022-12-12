@@ -14,13 +14,13 @@
 function wetRegulate(elem) {
       if(elem !== undefined) {
         document.querySelector('.characterInfo__bar--wetCount').innerHTML = elem;
-        if(elem < 20) {
+        if(elem == 0) {
           document.querySelector('.characterInfo__bar--wet').style.color = '#c8f7ff';
-        } else if (elem >= 20 && elem < 50) {
+        } else if (elem > 0 && elem < 30) {
           document.querySelector('.characterInfo__bar--wet').style.color = '#90efff';
-        } else if (elem >= 50 && elem < 90) {
+        } else if (elem >= 30 && elem < 50) {
           document.querySelector('.characterInfo__bar--wet').style.color = '#7fa3f5';
-        } else if (elem >= 90) {
+        } else if (elem >= 50) {
           document.querySelector('.characterInfo__bar--wet').style.color = '#326ef7';
         }
       }

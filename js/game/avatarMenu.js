@@ -2,22 +2,46 @@ document.querySelector('.characterInfo__temp').addEventListener('mouseover', () 
   function temp() {
     const elem = document.querySelector('.characterInfo__bar--tempCount');
     if(elem.innerHTML > 20 && elem.innerHTML <= 40) {
-      return 'you are good';
+      return `"I like this temperature."`;
     } else if(elem.innerHTML <= 20) {
-      return 'a bit cold but you are old and gold';
+      return `"It's a little chilly, but I'm fine."`;
     } else if (elem.innerHTML >= 50) {
-      return 'speka';
+      return `"It's really hot!"`;
     }
   }
   changeStatColor('temp', temp());
 })
 
 document.querySelector('.characterInfo__wet').addEventListener('mouseover', () => {
-  changeStatColor('wet', 'wet');
+  function wet() {
+    const elem = document.querySelector('.characterInfo__bar--wetCount');
+    if(elem.innerHTML == 0) {
+      return `"Well, at least I'm dry."`;
+    } else if(elem.innerHTML > 0 && elem.innerHTML <= 20) {
+      return  `A little wet. "I would not like to get sick."`;
+    } else if (elem.innerHTML >= 30 && elem.innerHTML < 50) {
+      return  `"I need to find a place where I can dry off."`;
+    } else if (elem.innerHTML >= 50) {
+      return `"It's not funny anymore."`
+    }
+  }
+  changeStatColor('wet', wet());
 })
 
 document.querySelector('.characterInfo__stamina').addEventListener('mouseover', () => {
-  changeStatColor('stamina', 'stamina');
+  function stamina() {
+    const elem = document.querySelector('.characterInfo__bar--staminaCount');
+    if(elem.innerHTML == 100) {
+      return `"I have so much energy!"`;
+    } else if(elem.innerHTML <= 70 && elem.innerHTML > 50) {
+      return  `"A little tired, but we have to move on."`;
+    } else if (elem.innerHTML <= 50 && elem.innerHTML > 20) {
+      return  `"I would not give up rest."`;
+    } else if (elem.innerHTML <= 20) {
+      return `"I need to rest."`
+    }
+  }
+  changeStatColor('stamina', stamina());
 })
 
 function changeStatColor(color, hintText) {

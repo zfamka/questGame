@@ -168,6 +168,9 @@
   width: 264px;
   height: 50px;
   background-color: #354a35;
+  font-size: 12px;
+  line-height: 40px;
+  letter-spacing: 1px;
   opacity: 0.8;
   position: absolute;
   top: 125px;
@@ -176,7 +179,7 @@
   border: 2px solid rgb(4, 82, 170);
   box-shadow: 3px 3px 11px 3px rgb(42, 119, 220);
   text-align: center;
-  animation: statHintAnimation 200ms 1;
+  animation: statHintAnimation 400ms 1;
   pointer-events: none;
 }
 
@@ -185,8 +188,13 @@
     top: 110px;
     opacity: 0;
   } 
+  50% {
+    opacity: 0.3;
+  }
+  90% {
+    opacity: 1;
+  }
   100% {
     top: 125px;
-    opacity: 1;
   }
 }
