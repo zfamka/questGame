@@ -43,7 +43,7 @@ function showTextNode(textNodeIndex) {
     eleaPhotoWardrobePhoto.style.display = 'block';
     eleaPhotoWardrobeBackground.style.display = 'block';
     helpHint.style.display = 'block';
-    helpHint.innerHTML = '(Дізнатись більше деталей зажміть "ЛКМ" на зображені)';
+    helpHint.innerHTML = `(Click "LMB" on the image to learn more details)`;
   }
 
   //----------------- func @vanishingOpacity.js vanish elea photo ID 10 --------

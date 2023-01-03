@@ -6,6 +6,11 @@
 @import url(familySheet.css);
 @import url(characterInfo.css);
 
+@font-face {
+  font-family: 'Source Code Pro';
+  src: url(../fonts/SourceCodePro-VariableFont_wght.ttf);
+}
+
 * {
   box-sizing: border-box;
   padding: 0;
@@ -15,7 +20,7 @@
 body {
   overflow: hidden;
   background-color: rgb(23, 21, 21);
-  font-family: "Bebas Neue", cursive;
+  font-family: 'Source Code Pro', sans-serif;
   user-select: none;
 }
 
