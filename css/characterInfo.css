@@ -143,6 +143,7 @@
 .characterInfo__state--positive span, .characterInfo__state--negative span {
   cursor: pointer;
   margin-right: 10px;
+  height: 22px;
 }
 
 .characterInfo__close {
@@ -151,7 +152,7 @@
 }
 
 .characterInfo__close a {
-  line-height: 32px;
+  line-height: 48px;
   letter-spacing: 5px;
   font-size: 25px;
   text-decoration: none;

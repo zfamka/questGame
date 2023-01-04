@@ -25,7 +25,7 @@
     inventoryOpenItem.style.filter = 'graysclae(0%)';
 
     if (elem.target.classList.contains('eleaInventory') == true) {
-      inventoryOpenItemText.innerHTML = 'Еліа?'
+      inventoryOpenItemText.innerHTML = 'Elia?'
     }
 
     if (elem.target.classList.contains('familisheetstartgame') == true) {

@@ -98,6 +98,12 @@ function showTextNode(textNodeIndex) {
     setTimeout(() => {
       mainC.style.transition = '0.4s'
     }, 7000);
+
+
+      if(textNode.positiveEffects !== undefined) {
+        document.querySelector('.characterInfo__state--positive')
+      }
+
   }
 
   eventAnimation(textNode.activeEventFire, '200ms', 'splashfire', 'rotate', '../img/fireball.png');
@@ -144,6 +150,7 @@ const textNodes = [
     temp: 20,
     wet: 0,
     stamina: 100,
+    positiveEffects: 'chill',
     options: [
       {
         text: `Далі...`,
